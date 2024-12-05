@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from "react";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import StarRating from "./StarRating";
 
 const RestaurantList = (props) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
-  let history = useHistory();
+  let history = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       try {
