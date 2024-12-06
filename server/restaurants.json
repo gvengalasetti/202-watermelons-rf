@@ -1,0 +1,4402 @@
+[
+  {
+    "_id": "1",
+    "name": "Restaurant 1",
+    "category": "Vegan",
+    "price_level": "$$",
+    "location": {
+      "street": "586 Elm St",
+      "city": "Los Angeles",
+      "state": "TX",
+      "zip": "63909"
+    },
+    "hours": {
+      "monday": "12 AM - 7 PM",
+      "tuesday": "9 AM - 6 PM",
+      "wednesday": "11 AM - 3 PM",
+      "thursday": "10 AM - 8 PM",
+      "friday": "9 AM - 3 PM"
+    },
+    "contact_info": "+1-393-383-4937",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "1",
+        "user_id": "user_48",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639063"
+      },
+      {
+        "restaurant_id": "1",
+        "user_id": "user_17",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639337"
+      },
+      {
+        "restaurant_id": "1",
+        "user_id": "user_26",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639341"
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "name": "Restaurant 2",
+    "category": "Indian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "670 Pine Rd",
+      "city": "San Diego",
+      "state": "MI",
+      "zip": "47659"
+    },
+    "hours": {
+      "monday": "9 AM - 6 PM",
+      "tuesday": "12 AM - 2 PM",
+      "wednesday": "10 AM - 2 PM",
+      "thursday": "11 AM - 8 PM",
+      "friday": "9 AM - 1 PM"
+    },
+    "contact_info": "+1-692-547-7022",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "2",
+        "user_id": "user_30",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639360"
+      },
+      {
+        "restaurant_id": "2",
+        "user_id": "user_4",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639363"
+      },
+      {
+        "restaurant_id": "2",
+        "user_id": "user_33",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639367"
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "name": "Restaurant 3",
+    "category": "Seafood",
+    "price_level": "$$$$",
+    "location": {
+      "street": "550 Sunset Blvd",
+      "city": "Houston",
+      "state": "IL",
+      "zip": "59103"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "9 AM - 2 PM",
+      "thursday": "11 AM - 1 PM",
+      "friday": "12 AM - 6 PM"
+    },
+    "contact_info": "+1-453-372-6514",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "3",
+        "user_id": "user_28",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639384"
+      },
+      {
+        "restaurant_id": "3",
+        "user_id": "user_4",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639387"
+      },
+      {
+        "restaurant_id": "3",
+        "user_id": "user_1",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639391"
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "name": "Restaurant 4",
+    "category": "Chinese",
+    "price_level": "$$$$",
+    "location": {
+      "street": "480 Main St",
+      "city": "Dallas",
+      "state": "MI",
+      "zip": "51788"
+    },
+    "hours": {
+      "monday": "11 AM - 5 PM",
+      "tuesday": "11 AM - 6 PM",
+      "wednesday": "9 AM - 5 PM",
+      "thursday": "10 AM - 5 PM",
+      "friday": "11 AM - 6 PM"
+    },
+    "contact_info": "+1-516-210-6194",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "4",
+        "user_id": "user_45",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639407"
+      },
+      {
+        "restaurant_id": "4",
+        "user_id": "user_40",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639411"
+      },
+      {
+        "restaurant_id": "4",
+        "user_id": "user_44",
+        "rating": 5,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639414"
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "name": "Restaurant 5",
+    "category": "Indian",
+    "price_level": "$",
+    "location": {
+      "street": "692 Elm St",
+      "city": "Chicago",
+      "state": "CA",
+      "zip": "88460"
+    },
+    "hours": {
+      "monday": "9 AM - 6 PM",
+      "tuesday": "11 AM - 9 PM",
+      "wednesday": "11 AM - 9 PM",
+      "thursday": "10 AM - 9 PM",
+      "friday": "9 AM - 9 PM"
+    },
+    "contact_info": "+1-100-666-2237",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "5",
+        "user_id": "user_4",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639430"
+      },
+      {
+        "restaurant_id": "5",
+        "user_id": "user_13",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639434"
+      },
+      {
+        "restaurant_id": "5",
+        "user_id": "user_46",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639437"
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "name": "Restaurant 6",
+    "category": "Steakhouse",
+    "price_level": "$$$$",
+    "location": {
+      "street": "990 Oak Ave",
+      "city": "Philadelphia",
+      "state": "FL",
+      "zip": "52928"
+    },
+    "hours": {
+      "monday": "10 AM - 3 PM",
+      "tuesday": "10 AM - 2 PM",
+      "wednesday": "11 AM - 6 PM",
+      "thursday": "11 AM - 4 PM",
+      "friday": "10 AM - 5 PM"
+    },
+    "contact_info": "+1-744-381-8502",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "6",
+        "user_id": "user_42",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639454"
+      },
+      {
+        "restaurant_id": "6",
+        "user_id": "user_47",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639457"
+      },
+      {
+        "restaurant_id": "6",
+        "user_id": "user_4",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639460"
+      }
+    ]
+  },
+  {
+    "_id": "7",
+    "name": "Restaurant 7",
+    "category": "Indian",
+    "price_level": "$",
+    "location": {
+      "street": "235 Broadway",
+      "city": "Dallas",
+      "state": "NY",
+      "zip": "37737"
+    },
+    "hours": {
+      "monday": "10 AM - 8 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "9 AM - 5 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "12 AM - 8 PM"
+    },
+    "contact_info": "+1-472-728-1490",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "7",
+        "user_id": "user_21",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639477"
+      },
+      {
+        "restaurant_id": "7",
+        "user_id": "user_20",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639480"
+      },
+      {
+        "restaurant_id": "7",
+        "user_id": "user_41",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639483"
+      }
+    ]
+  },
+  {
+    "_id": "8",
+    "name": "Restaurant 8",
+    "category": "Steakhouse",
+    "price_level": "$$$",
+    "location": {
+      "street": "429 Maple Dr",
+      "city": "Los Angeles",
+      "state": "TX",
+      "zip": "61998"
+    },
+    "hours": {
+      "monday": "9 AM - 7 PM",
+      "tuesday": "10 AM - 1 PM",
+      "wednesday": "10 AM - 2 PM",
+      "thursday": "9 AM - 2 PM",
+      "friday": "12 AM - 2 PM"
+    },
+    "contact_info": "+1-993-452-8739",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "8",
+        "user_id": "user_4",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639502"
+      },
+      {
+        "restaurant_id": "8",
+        "user_id": "user_20",
+        "rating": 2,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639506"
+      },
+      {
+        "restaurant_id": "8",
+        "user_id": "user_46",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639509"
+      }
+    ]
+  },
+  {
+    "_id": "9",
+    "name": "Restaurant 9",
+    "category": "Steakhouse",
+    "price_level": "$$$$",
+    "location": {
+      "street": "686 Sunset Blvd",
+      "city": "Chicago",
+      "state": "OH",
+      "zip": "59896"
+    },
+    "hours": {
+      "monday": "10 AM - 9 PM",
+      "tuesday": "12 AM - 1 PM",
+      "wednesday": "12 AM - 4 PM",
+      "thursday": "12 AM - 7 PM",
+      "friday": "11 AM - 8 PM"
+    },
+    "contact_info": "+1-418-374-9952",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "9",
+        "user_id": "user_24",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639527"
+      },
+      {
+        "restaurant_id": "9",
+        "user_id": "user_47",
+        "rating": 4,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639530"
+      },
+      {
+        "restaurant_id": "9",
+        "user_id": "user_2",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639533"
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "name": "Restaurant 10",
+    "category": "Japanese",
+    "price_level": "$",
+    "location": {
+      "street": "234 Main St",
+      "city": "Houston",
+      "state": "NY",
+      "zip": "94256"
+    },
+    "hours": {
+      "monday": "9 AM - 8 PM",
+      "tuesday": "11 AM - 4 PM",
+      "wednesday": "9 AM - 3 PM",
+      "thursday": "12 AM - 5 PM",
+      "friday": "10 AM - 4 PM"
+    },
+    "contact_info": "+1-866-187-7428",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "10",
+        "user_id": "user_34",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639552"
+      },
+      {
+        "restaurant_id": "10",
+        "user_id": "user_50",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639556"
+      },
+      {
+        "restaurant_id": "10",
+        "user_id": "user_19",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639559"
+      }
+    ]
+  },
+  {
+    "_id": "11",
+    "name": "Restaurant 11",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "175 Sunset Blvd",
+      "city": "San Diego",
+      "state": "FL",
+      "zip": "51480"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "10 AM - 3 PM",
+      "wednesday": "10 AM - 6 PM",
+      "thursday": "11 AM - 1 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-760-604-7679",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "11",
+        "user_id": "user_46",
+        "rating": 3,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639577"
+      },
+      {
+        "restaurant_id": "11",
+        "user_id": "user_45",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639580"
+      },
+      {
+        "restaurant_id": "11",
+        "user_id": "user_23",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639584"
+      }
+    ]
+  },
+  {
+    "_id": "12",
+    "name": "Restaurant 12",
+    "category": "Chinese",
+    "price_level": "$$$",
+    "location": {
+      "street": "612 Oak Ave",
+      "city": "Phoenix",
+      "state": "FL",
+      "zip": "28375"
+    },
+    "hours": {
+      "monday": "9 AM - 3 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "9 AM - 9 PM"
+    },
+    "contact_info": "+1-972-759-7865",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "12",
+        "user_id": "user_40",
+        "rating": 4,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639601"
+      },
+      {
+        "restaurant_id": "12",
+        "user_id": "user_36",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639604"
+      },
+      {
+        "restaurant_id": "12",
+        "user_id": "user_41",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639608"
+      }
+    ]
+  },
+  {
+    "_id": "13",
+    "name": "Restaurant 13",
+    "category": "Vegan",
+    "price_level": "$",
+    "location": {
+      "street": "683 Sunset Blvd",
+      "city": "San Antonio",
+      "state": "PA",
+      "zip": "81967"
+    },
+    "hours": {
+      "monday": "10 AM - 9 PM",
+      "tuesday": "12 AM - 6 PM",
+      "wednesday": "11 AM - 1 PM",
+      "thursday": "11 AM - 8 PM",
+      "friday": "11 AM - 5 PM"
+    },
+    "contact_info": "+1-500-624-6470",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "13",
+        "user_id": "user_42",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639625"
+      },
+      {
+        "restaurant_id": "13",
+        "user_id": "user_35",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639628"
+      },
+      {
+        "restaurant_id": "13",
+        "user_id": "user_32",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639631"
+      }
+    ]
+  },
+  {
+    "_id": "14",
+    "name": "Restaurant 14",
+    "category": "Italian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "25 Maple Dr",
+      "city": "Houston",
+      "state": "IL",
+      "zip": "10536"
+    },
+    "hours": {
+      "monday": "11 AM - 1 PM",
+      "tuesday": "12 AM - 2 PM",
+      "wednesday": "9 AM - 6 PM",
+      "thursday": "11 AM - 3 PM",
+      "friday": "12 AM - 6 PM"
+    },
+    "contact_info": "+1-149-744-6045",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "14",
+        "user_id": "user_3",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639648"
+      },
+      {
+        "restaurant_id": "14",
+        "user_id": "user_36",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639651"
+      },
+      {
+        "restaurant_id": "14",
+        "user_id": "user_39",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639655"
+      }
+    ]
+  },
+  {
+    "_id": "15",
+    "name": "Restaurant 15",
+    "category": "Japanese",
+    "price_level": "$$$",
+    "location": {
+      "street": "346 Maple Dr",
+      "city": "Chicago",
+      "state": "MI",
+      "zip": "93671"
+    },
+    "hours": {
+      "monday": "9 AM - 9 PM",
+      "tuesday": "11 AM - 5 PM",
+      "wednesday": "10 AM - 9 PM",
+      "thursday": "11 AM - 7 PM",
+      "friday": "12 AM - 9 PM"
+    },
+    "contact_info": "+1-229-179-3851",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "15",
+        "user_id": "user_27",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639674"
+      },
+      {
+        "restaurant_id": "15",
+        "user_id": "user_17",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639678"
+      },
+      {
+        "restaurant_id": "15",
+        "user_id": "user_18",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639681"
+      }
+    ]
+  },
+  {
+    "_id": "16",
+    "name": "Restaurant 16",
+    "category": "Japanese",
+    "price_level": "$$$$",
+    "location": {
+      "street": "798 Maple Dr",
+      "city": "Dallas",
+      "state": "NY",
+      "zip": "64187"
+    },
+    "hours": {
+      "monday": "9 AM - 7 PM",
+      "tuesday": "12 AM - 5 PM",
+      "wednesday": "10 AM - 7 PM",
+      "thursday": "12 AM - 9 PM",
+      "friday": "9 AM - 9 PM"
+    },
+    "contact_info": "+1-326-930-2842",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "16",
+        "user_id": "user_48",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639698"
+      },
+      {
+        "restaurant_id": "16",
+        "user_id": "user_16",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639701"
+      },
+      {
+        "restaurant_id": "16",
+        "user_id": "user_45",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639705"
+      }
+    ]
+  },
+  {
+    "_id": "17",
+    "name": "Restaurant 17",
+    "category": "Seafood",
+    "price_level": "$$$$",
+    "location": {
+      "street": "210 Elm St",
+      "city": "New York",
+      "state": "AZ",
+      "zip": "75296"
+    },
+    "hours": {
+      "monday": "9 AM - 3 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "10 AM - 7 PM",
+      "thursday": "11 AM - 3 PM",
+      "friday": "10 AM - 4 PM"
+    },
+    "contact_info": "+1-105-914-3440",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "17",
+        "user_id": "user_45",
+        "rating": 2,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639721"
+      },
+      {
+        "restaurant_id": "17",
+        "user_id": "user_17",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639724"
+      },
+      {
+        "restaurant_id": "17",
+        "user_id": "user_4",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639727"
+      }
+    ]
+  },
+  {
+    "_id": "18",
+    "name": "Restaurant 18",
+    "category": "Mexican",
+    "price_level": "$$$$",
+    "location": {
+      "street": "373 Main St",
+      "city": "New York",
+      "state": "FL",
+      "zip": "12052"
+    },
+    "hours": {
+      "monday": "11 AM - 3 PM",
+      "tuesday": "11 AM - 7 PM",
+      "wednesday": "10 AM - 2 PM",
+      "thursday": "9 AM - 2 PM",
+      "friday": "11 AM - 3 PM"
+    },
+    "contact_info": "+1-519-154-5680",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "18",
+        "user_id": "user_10",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639746"
+      },
+      {
+        "restaurant_id": "18",
+        "user_id": "user_8",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639749"
+      },
+      {
+        "restaurant_id": "18",
+        "user_id": "user_39",
+        "rating": 5,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639752"
+      }
+    ]
+  },
+  {
+    "_id": "19",
+    "name": "Restaurant 19",
+    "category": "Indian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "410 Oak Ave",
+      "city": "Dallas",
+      "state": "MI",
+      "zip": "26010"
+    },
+    "hours": {
+      "monday": "9 AM - 1 PM",
+      "tuesday": "11 AM - 9 PM",
+      "wednesday": "10 AM - 2 PM",
+      "thursday": "9 AM - 1 PM",
+      "friday": "12 AM - 1 PM"
+    },
+    "contact_info": "+1-459-112-5527",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "19",
+        "user_id": "user_23",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639769"
+      },
+      {
+        "restaurant_id": "19",
+        "user_id": "user_44",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639773"
+      },
+      {
+        "restaurant_id": "19",
+        "user_id": "user_50",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639777"
+      }
+    ]
+  },
+  {
+    "_id": "20",
+    "name": "Restaurant 20",
+    "category": "American",
+    "price_level": "$$$",
+    "location": {
+      "street": "396 Pine Rd",
+      "city": "Phoenix",
+      "state": "TX",
+      "zip": "80189"
+    },
+    "hours": {
+      "monday": "12 AM - 3 PM",
+      "tuesday": "10 AM - 5 PM",
+      "wednesday": "9 AM - 6 PM",
+      "thursday": "9 AM - 5 PM",
+      "friday": "12 AM - 3 PM"
+    },
+    "contact_info": "+1-289-923-2677",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "20",
+        "user_id": "user_16",
+        "rating": 4,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639793"
+      },
+      {
+        "restaurant_id": "20",
+        "user_id": "user_45",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639797"
+      },
+      {
+        "restaurant_id": "20",
+        "user_id": "user_30",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639800"
+      }
+    ]
+  },
+  {
+    "_id": "21",
+    "name": "Restaurant 21",
+    "category": "Vegan",
+    "price_level": "$$",
+    "location": {
+      "street": "292 Elm St",
+      "city": "New York",
+      "state": "FL",
+      "zip": "58663"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "12 AM - 1 PM",
+      "wednesday": "9 AM - 7 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "10 AM - 1 PM"
+    },
+    "contact_info": "+1-979-793-4678",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "21",
+        "user_id": "user_36",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639816"
+      },
+      {
+        "restaurant_id": "21",
+        "user_id": "user_45",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639819"
+      },
+      {
+        "restaurant_id": "21",
+        "user_id": "user_47",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639824"
+      }
+    ]
+  },
+  {
+    "_id": "22",
+    "name": "Restaurant 22",
+    "category": "Steakhouse",
+    "price_level": "$",
+    "location": {
+      "street": "352 Oak Ave",
+      "city": "Dallas",
+      "state": "MI",
+      "zip": "19855"
+    },
+    "hours": {
+      "monday": "12 AM - 7 PM",
+      "tuesday": "11 AM - 4 PM",
+      "wednesday": "9 AM - 1 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "10 AM - 8 PM"
+    },
+    "contact_info": "+1-874-253-6727",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "22",
+        "user_id": "user_7",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639841"
+      },
+      {
+        "restaurant_id": "22",
+        "user_id": "user_50",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639844"
+      },
+      {
+        "restaurant_id": "22",
+        "user_id": "user_35",
+        "rating": 3,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639847"
+      }
+    ]
+  },
+  {
+    "_id": "23",
+    "name": "Restaurant 23",
+    "category": "Chinese",
+    "price_level": "$$$$",
+    "location": {
+      "street": "677 Elm St",
+      "city": "San Antonio",
+      "state": "OH",
+      "zip": "35606"
+    },
+    "hours": {
+      "monday": "11 AM - 1 PM",
+      "tuesday": "12 AM - 2 PM",
+      "wednesday": "9 AM - 5 PM",
+      "thursday": "11 AM - 9 PM",
+      "friday": "12 AM - 5 PM"
+    },
+    "contact_info": "+1-579-718-2052",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "23",
+        "user_id": "user_15",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639865"
+      },
+      {
+        "restaurant_id": "23",
+        "user_id": "user_26",
+        "rating": 2,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639868"
+      },
+      {
+        "restaurant_id": "23",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639871"
+      }
+    ]
+  },
+  {
+    "_id": "24",
+    "name": "Restaurant 24",
+    "category": "Seafood",
+    "price_level": "$$$",
+    "location": {
+      "street": "236 Broadway",
+      "city": "Chicago",
+      "state": "NY",
+      "zip": "55667"
+    },
+    "hours": {
+      "monday": "11 AM - 3 PM",
+      "tuesday": "12 AM - 1 PM",
+      "wednesday": "9 AM - 8 PM",
+      "thursday": "10 AM - 6 PM",
+      "friday": "9 AM - 8 PM"
+    },
+    "contact_info": "+1-653-988-8036",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "24",
+        "user_id": "user_10",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639890"
+      },
+      {
+        "restaurant_id": "24",
+        "user_id": "user_15",
+        "rating": 3,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639893"
+      },
+      {
+        "restaurant_id": "24",
+        "user_id": "user_17",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639896"
+      }
+    ]
+  },
+  {
+    "_id": "25",
+    "name": "Restaurant 25",
+    "category": "Steakhouse",
+    "price_level": "$$$",
+    "location": {
+      "street": "633 Main St",
+      "city": "Houston",
+      "state": "OH",
+      "zip": "84457"
+    },
+    "hours": {
+      "monday": "11 AM - 1 PM",
+      "tuesday": "12 AM - 7 PM",
+      "wednesday": "10 AM - 7 PM",
+      "thursday": "12 AM - 9 PM",
+      "friday": "12 AM - 9 PM"
+    },
+    "contact_info": "+1-395-916-3138",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "25",
+        "user_id": "user_20",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639915"
+      },
+      {
+        "restaurant_id": "25",
+        "user_id": "user_2",
+        "rating": 4,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.639918"
+      },
+      {
+        "restaurant_id": "25",
+        "user_id": "user_13",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.639921"
+      }
+    ]
+  },
+  {
+    "_id": "26",
+    "name": "Restaurant 26",
+    "category": "Japanese",
+    "price_level": "$$",
+    "location": {
+      "street": "402 Pine Rd",
+      "city": "Philadelphia",
+      "state": "CA",
+      "zip": "97612"
+    },
+    "hours": {
+      "monday": "9 AM - 2 PM",
+      "tuesday": "9 AM - 3 PM",
+      "wednesday": "11 AM - 1 PM",
+      "thursday": "11 AM - 6 PM",
+      "friday": "10 AM - 4 PM"
+    },
+    "contact_info": "+1-473-347-1948",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "26",
+        "user_id": "user_19",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639938"
+      },
+      {
+        "restaurant_id": "26",
+        "user_id": "user_31",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.639941"
+      },
+      {
+        "restaurant_id": "26",
+        "user_id": "user_40",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639945"
+      }
+    ]
+  },
+  {
+    "_id": "27",
+    "name": "Restaurant 27",
+    "category": "Mexican",
+    "price_level": "$$$",
+    "location": {
+      "street": "868 Maple Dr",
+      "city": "Phoenix",
+      "state": "NY",
+      "zip": "32245"
+    },
+    "hours": {
+      "monday": "12 AM - 1 PM",
+      "tuesday": "11 AM - 1 PM",
+      "wednesday": "9 AM - 1 PM",
+      "thursday": "12 AM - 1 PM",
+      "friday": "10 AM - 5 PM"
+    },
+    "contact_info": "+1-115-258-5305",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "27",
+        "user_id": "user_45",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639961"
+      },
+      {
+        "restaurant_id": "27",
+        "user_id": "user_5",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.639964"
+      },
+      {
+        "restaurant_id": "27",
+        "user_id": "user_19",
+        "rating": 3,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.639968"
+      }
+    ]
+  },
+  {
+    "_id": "28",
+    "name": "Restaurant 28",
+    "category": "American",
+    "price_level": "$",
+    "location": {
+      "street": "286 Oak Ave",
+      "city": "Houston",
+      "state": "OH",
+      "zip": "77250"
+    },
+    "hours": {
+      "monday": "12 AM - 2 PM",
+      "tuesday": "10 AM - 6 PM",
+      "wednesday": "9 AM - 7 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "9 AM - 2 PM"
+    },
+    "contact_info": "+1-568-867-9418",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "28",
+        "user_id": "user_20",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.639985"
+      },
+      {
+        "restaurant_id": "28",
+        "user_id": "user_47",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.639988"
+      },
+      {
+        "restaurant_id": "28",
+        "user_id": "user_21",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.639992"
+      }
+    ]
+  },
+  {
+    "_id": "29",
+    "name": "Restaurant 29",
+    "category": "Japanese",
+    "price_level": "$",
+    "location": {
+      "street": "739 Oak Ave",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "14973"
+    },
+    "hours": {
+      "monday": "12 AM - 3 PM",
+      "tuesday": "10 AM - 9 PM",
+      "wednesday": "10 AM - 2 PM",
+      "thursday": "11 AM - 3 PM",
+      "friday": "9 AM - 6 PM"
+    },
+    "contact_info": "+1-893-730-4573",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "29",
+        "user_id": "user_43",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640009"
+      },
+      {
+        "restaurant_id": "29",
+        "user_id": "user_38",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640013"
+      },
+      {
+        "restaurant_id": "29",
+        "user_id": "user_13",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640016"
+      }
+    ]
+  },
+  {
+    "_id": "30",
+    "name": "Restaurant 30",
+    "category": "Italian",
+    "price_level": "$",
+    "location": {
+      "street": "694 Elm St",
+      "city": "San Antonio",
+      "state": "CA",
+      "zip": "93094"
+    },
+    "hours": {
+      "monday": "12 AM - 4 PM",
+      "tuesday": "11 AM - 1 PM",
+      "wednesday": "11 AM - 2 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "11 AM - 9 PM"
+    },
+    "contact_info": "+1-703-438-2334",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "30",
+        "user_id": "user_47",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640032"
+      },
+      {
+        "restaurant_id": "30",
+        "user_id": "user_19",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640035"
+      },
+      {
+        "restaurant_id": "30",
+        "user_id": "user_22",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640039"
+      }
+    ]
+  },
+  {
+    "_id": "31",
+    "name": "Restaurant 31",
+    "category": "Seafood",
+    "price_level": "$$",
+    "location": {
+      "street": "463 Pine Rd",
+      "city": "Los Angeles",
+      "state": "PA",
+      "zip": "71653"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "11 AM - 8 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "10 AM - 2 PM",
+      "friday": "10 AM - 7 PM"
+    },
+    "contact_info": "+1-641-645-4367",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "31",
+        "user_id": "user_13",
+        "rating": 5,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640056"
+      },
+      {
+        "restaurant_id": "31",
+        "user_id": "user_5",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640059"
+      },
+      {
+        "restaurant_id": "31",
+        "user_id": "user_29",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640062"
+      }
+    ]
+  },
+  {
+    "_id": "32",
+    "name": "Restaurant 32",
+    "category": "Chinese",
+    "price_level": "$$",
+    "location": {
+      "street": "83 Maple Dr",
+      "city": "San Diego",
+      "state": "TX",
+      "zip": "88740"
+    },
+    "hours": {
+      "monday": "9 AM - 2 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "9 AM - 6 PM",
+      "thursday": "10 AM - 6 PM",
+      "friday": "12 AM - 5 PM"
+    },
+    "contact_info": "+1-846-699-1065",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "32",
+        "user_id": "user_24",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640079"
+      },
+      {
+        "restaurant_id": "32",
+        "user_id": "user_6",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640083"
+      },
+      {
+        "restaurant_id": "32",
+        "user_id": "user_43",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640086"
+      }
+    ]
+  },
+  {
+    "_id": "33",
+    "name": "Restaurant 33",
+    "category": "Seafood",
+    "price_level": "$$$",
+    "location": {
+      "street": "559 Broadway",
+      "city": "Dallas",
+      "state": "PA",
+      "zip": "62679"
+    },
+    "hours": {
+      "monday": "9 AM - 7 PM",
+      "tuesday": "11 AM - 5 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "12 AM - 6 PM",
+      "friday": "11 AM - 9 PM"
+    },
+    "contact_info": "+1-482-141-6432",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "33",
+        "user_id": "user_34",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640102"
+      },
+      {
+        "restaurant_id": "33",
+        "user_id": "user_26",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640106"
+      },
+      {
+        "restaurant_id": "33",
+        "user_id": "user_20",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640110"
+      }
+    ]
+  },
+  {
+    "_id": "34",
+    "name": "Restaurant 34",
+    "category": "Indian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "390 Elm St",
+      "city": "San Antonio",
+      "state": "IL",
+      "zip": "14442"
+    },
+    "hours": {
+      "monday": "10 AM - 3 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "11 AM - 8 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "11 AM - 9 PM"
+    },
+    "contact_info": "+1-554-533-8301",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "34",
+        "user_id": "user_45",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640129"
+      },
+      {
+        "restaurant_id": "34",
+        "user_id": "user_9",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640132"
+      },
+      {
+        "restaurant_id": "34",
+        "user_id": "user_4",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640135"
+      }
+    ]
+  },
+  {
+    "_id": "35",
+    "name": "Restaurant 35",
+    "category": "Vegan",
+    "price_level": "$",
+    "location": {
+      "street": "814 Maple Dr",
+      "city": "Dallas",
+      "state": "AZ",
+      "zip": "98487"
+    },
+    "hours": {
+      "monday": "11 AM - 4 PM",
+      "tuesday": "10 AM - 2 PM",
+      "wednesday": "12 AM - 5 PM",
+      "thursday": "9 AM - 1 PM",
+      "friday": "11 AM - 8 PM"
+    },
+    "contact_info": "+1-386-277-3448",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "35",
+        "user_id": "user_14",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640155"
+      },
+      {
+        "restaurant_id": "35",
+        "user_id": "user_37",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640158"
+      },
+      {
+        "restaurant_id": "35",
+        "user_id": "user_8",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640162"
+      }
+    ]
+  },
+  {
+    "_id": "36",
+    "name": "Restaurant 36",
+    "category": "Italian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "50 Broadway",
+      "city": "Philadelphia",
+      "state": "IL",
+      "zip": "86387"
+    },
+    "hours": {
+      "monday": "11 AM - 9 PM",
+      "tuesday": "9 AM - 8 PM",
+      "wednesday": "11 AM - 6 PM",
+      "thursday": "12 AM - 6 PM",
+      "friday": "10 AM - 4 PM"
+    },
+    "contact_info": "+1-607-354-5278",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "36",
+        "user_id": "user_6",
+        "rating": 1,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640178"
+      },
+      {
+        "restaurant_id": "36",
+        "user_id": "user_36",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640182"
+      },
+      {
+        "restaurant_id": "36",
+        "user_id": "user_14",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640185"
+      }
+    ]
+  },
+  {
+    "_id": "37",
+    "name": "Restaurant 37",
+    "category": "Indian",
+    "price_level": "$$",
+    "location": {
+      "street": "373 Elm St",
+      "city": "Phoenix",
+      "state": "CA",
+      "zip": "32271"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "10 AM - 3 PM",
+      "wednesday": "10 AM - 8 PM",
+      "thursday": "12 AM - 1 PM",
+      "friday": "11 AM - 8 PM"
+    },
+    "contact_info": "+1-892-384-9095",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "37",
+        "user_id": "user_10",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640202"
+      },
+      {
+        "restaurant_id": "37",
+        "user_id": "user_21",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640206"
+      },
+      {
+        "restaurant_id": "37",
+        "user_id": "user_16",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640210"
+      }
+    ]
+  },
+  {
+    "_id": "38",
+    "name": "Restaurant 38",
+    "category": "Seafood",
+    "price_level": "$$$",
+    "location": {
+      "street": "508 Main St",
+      "city": "Chicago",
+      "state": "PA",
+      "zip": "99248"
+    },
+    "hours": {
+      "monday": "12 AM - 7 PM",
+      "tuesday": "11 AM - 9 PM",
+      "wednesday": "10 AM - 8 PM",
+      "thursday": "12 AM - 9 PM",
+      "friday": "9 AM - 2 PM"
+    },
+    "contact_info": "+1-671-940-4671",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "38",
+        "user_id": "user_21",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640228"
+      },
+      {
+        "restaurant_id": "38",
+        "user_id": "user_22",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640232"
+      },
+      {
+        "restaurant_id": "38",
+        "user_id": "user_36",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640235"
+      }
+    ]
+  },
+  {
+    "_id": "39",
+    "name": "Restaurant 39",
+    "category": "Mexican",
+    "price_level": "$$",
+    "location": {
+      "street": "592 Pine Rd",
+      "city": "New York",
+      "state": "PA",
+      "zip": "49101"
+    },
+    "hours": {
+      "monday": "10 AM - 8 PM",
+      "tuesday": "10 AM - 6 PM",
+      "wednesday": "10 AM - 9 PM",
+      "thursday": "11 AM - 9 PM",
+      "friday": "10 AM - 8 PM"
+    },
+    "contact_info": "+1-323-771-1467",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "39",
+        "user_id": "user_32",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640254"
+      },
+      {
+        "restaurant_id": "39",
+        "user_id": "user_24",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640258"
+      },
+      {
+        "restaurant_id": "39",
+        "user_id": "user_3",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640261"
+      }
+    ]
+  },
+  {
+    "_id": "40",
+    "name": "Restaurant 40",
+    "category": "American",
+    "price_level": "$$$$",
+    "location": {
+      "street": "909 Main St",
+      "city": "Dallas",
+      "state": "MI",
+      "zip": "66620"
+    },
+    "hours": {
+      "monday": "9 AM - 8 PM",
+      "tuesday": "11 AM - 7 PM",
+      "wednesday": "11 AM - 8 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "9 AM - 9 PM"
+    },
+    "contact_info": "+1-846-940-6939",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "40",
+        "user_id": "user_26",
+        "rating": 4,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640277"
+      },
+      {
+        "restaurant_id": "40",
+        "user_id": "user_29",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640280"
+      },
+      {
+        "restaurant_id": "40",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640283"
+      }
+    ]
+  },
+  {
+    "_id": "41",
+    "name": "Restaurant 41",
+    "category": "Italian",
+    "price_level": "$$$",
+    "location": {
+      "street": "301 Broadway",
+      "city": "Chicago",
+      "state": "PA",
+      "zip": "25646"
+    },
+    "hours": {
+      "monday": "12 AM - 9 PM",
+      "tuesday": "12 AM - 5 PM",
+      "wednesday": "11 AM - 1 PM",
+      "thursday": "9 AM - 5 PM",
+      "friday": "11 AM - 3 PM"
+    },
+    "contact_info": "+1-701-850-9308",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "41",
+        "user_id": "user_29",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640301"
+      },
+      {
+        "restaurant_id": "41",
+        "user_id": "user_36",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640304"
+      },
+      {
+        "restaurant_id": "41",
+        "user_id": "user_40",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640307"
+      }
+    ]
+  },
+  {
+    "_id": "42",
+    "name": "Restaurant 42",
+    "category": "Indian",
+    "price_level": "$$",
+    "location": {
+      "street": "292 Elm St",
+      "city": "Philadelphia",
+      "state": "OH",
+      "zip": "72523"
+    },
+    "hours": {
+      "monday": "10 AM - 9 PM",
+      "tuesday": "9 AM - 6 PM",
+      "wednesday": "9 AM - 2 PM",
+      "thursday": "11 AM - 3 PM",
+      "friday": "9 AM - 1 PM"
+    },
+    "contact_info": "+1-499-492-6688",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "42",
+        "user_id": "user_19",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640324"
+      },
+      {
+        "restaurant_id": "42",
+        "user_id": "user_34",
+        "rating": 3,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640327"
+      },
+      {
+        "restaurant_id": "42",
+        "user_id": "user_27",
+        "rating": 4,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640332"
+      }
+    ]
+  },
+  {
+    "_id": "43",
+    "name": "Restaurant 43",
+    "category": "Indian",
+    "price_level": "$$",
+    "location": {
+      "street": "310 Broadway",
+      "city": "Chicago",
+      "state": "PA",
+      "zip": "37161"
+    },
+    "hours": {
+      "monday": "9 AM - 5 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "11 AM - 7 PM",
+      "thursday": "11 AM - 4 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-377-745-8347",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "43",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640349"
+      },
+      {
+        "restaurant_id": "43",
+        "user_id": "user_3",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640352"
+      },
+      {
+        "restaurant_id": "43",
+        "user_id": "user_28",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640355"
+      }
+    ]
+  },
+  {
+    "_id": "44",
+    "name": "Restaurant 44",
+    "category": "American",
+    "price_level": "$$$",
+    "location": {
+      "street": "138 Main St",
+      "city": "San Antonio",
+      "state": "CA",
+      "zip": "38746"
+    },
+    "hours": {
+      "monday": "11 AM - 4 PM",
+      "tuesday": "11 AM - 6 PM",
+      "wednesday": "12 AM - 1 PM",
+      "thursday": "11 AM - 8 PM",
+      "friday": "10 AM - 6 PM"
+    },
+    "contact_info": "+1-678-939-3075",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "44",
+        "user_id": "user_35",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640373"
+      },
+      {
+        "restaurant_id": "44",
+        "user_id": "user_30",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640376"
+      },
+      {
+        "restaurant_id": "44",
+        "user_id": "user_2",
+        "rating": 4,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640380"
+      }
+    ]
+  },
+  {
+    "_id": "45",
+    "name": "Restaurant 45",
+    "category": "Italian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "105 Main St",
+      "city": "San Antonio",
+      "state": "NY",
+      "zip": "92895"
+    },
+    "hours": {
+      "monday": "10 AM - 1 PM",
+      "tuesday": "12 AM - 8 PM",
+      "wednesday": "11 AM - 2 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "12 AM - 3 PM"
+    },
+    "contact_info": "+1-540-438-5140",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "45",
+        "user_id": "user_38",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640396"
+      },
+      {
+        "restaurant_id": "45",
+        "user_id": "user_15",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640399"
+      },
+      {
+        "restaurant_id": "45",
+        "user_id": "user_38",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640402"
+      }
+    ]
+  },
+  {
+    "_id": "46",
+    "name": "Restaurant 46",
+    "category": "Steakhouse",
+    "price_level": "$$$",
+    "location": {
+      "street": "677 Broadway",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "14145"
+    },
+    "hours": {
+      "monday": "9 AM - 8 PM",
+      "tuesday": "11 AM - 2 PM",
+      "wednesday": "9 AM - 7 PM",
+      "thursday": "12 AM - 6 PM",
+      "friday": "10 AM - 5 PM"
+    },
+    "contact_info": "+1-607-467-4024",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "46",
+        "user_id": "user_17",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640419"
+      },
+      {
+        "restaurant_id": "46",
+        "user_id": "user_17",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640422"
+      },
+      {
+        "restaurant_id": "46",
+        "user_id": "user_12",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640425"
+      }
+    ]
+  },
+  {
+    "_id": "47",
+    "name": "Restaurant 47",
+    "category": "Steakhouse",
+    "price_level": "$$$$",
+    "location": {
+      "street": "422 Pine Rd",
+      "city": "San Diego",
+      "state": "PA",
+      "zip": "82520"
+    },
+    "hours": {
+      "monday": "9 AM - 4 PM",
+      "tuesday": "10 AM - 8 PM",
+      "wednesday": "12 AM - 7 PM",
+      "thursday": "11 AM - 7 PM",
+      "friday": "12 AM - 7 PM"
+    },
+    "contact_info": "+1-306-352-4937",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "47",
+        "user_id": "user_33",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640445"
+      },
+      {
+        "restaurant_id": "47",
+        "user_id": "user_40",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640449"
+      },
+      {
+        "restaurant_id": "47",
+        "user_id": "user_14",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640452"
+      }
+    ]
+  },
+  {
+    "_id": "48",
+    "name": "Restaurant 48",
+    "category": "Indian",
+    "price_level": "$$",
+    "location": {
+      "street": "275 Pine Rd",
+      "city": "Dallas",
+      "state": "FL",
+      "zip": "31224"
+    },
+    "hours": {
+      "monday": "12 AM - 4 PM",
+      "tuesday": "9 AM - 6 PM",
+      "wednesday": "12 AM - 6 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "9 AM - 1 PM"
+    },
+    "contact_info": "+1-877-983-3792",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "48",
+        "user_id": "user_36",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640469"
+      },
+      {
+        "restaurant_id": "48",
+        "user_id": "user_18",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640472"
+      },
+      {
+        "restaurant_id": "48",
+        "user_id": "user_38",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640475"
+      }
+    ]
+  },
+  {
+    "_id": "49",
+    "name": "Restaurant 49",
+    "category": "Seafood",
+    "price_level": "$$$$",
+    "location": {
+      "street": "766 Maple Dr",
+      "city": "Philadelphia",
+      "state": "IL",
+      "zip": "48903"
+    },
+    "hours": {
+      "monday": "11 AM - 5 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "11 AM - 6 PM",
+      "friday": "11 AM - 5 PM"
+    },
+    "contact_info": "+1-744-996-8759",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "49",
+        "user_id": "user_29",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640494"
+      },
+      {
+        "restaurant_id": "49",
+        "user_id": "user_50",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640497"
+      },
+      {
+        "restaurant_id": "49",
+        "user_id": "user_39",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640500"
+      }
+    ]
+  },
+  {
+    "_id": "50",
+    "name": "Restaurant 50",
+    "category": "Japanese",
+    "price_level": "$$$",
+    "location": {
+      "street": "652 Pine Rd",
+      "city": "New York",
+      "state": "TX",
+      "zip": "22938"
+    },
+    "hours": {
+      "monday": "11 AM - 4 PM",
+      "tuesday": "12 AM - 5 PM",
+      "wednesday": "9 AM - 1 PM",
+      "thursday": "12 AM - 8 PM",
+      "friday": "12 AM - 6 PM"
+    },
+    "contact_info": "+1-586-983-9062",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "50",
+        "user_id": "user_41",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640520"
+      },
+      {
+        "restaurant_id": "50",
+        "user_id": "user_32",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640524"
+      },
+      {
+        "restaurant_id": "50",
+        "user_id": "user_11",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640527"
+      }
+    ]
+  },
+  {
+    "_id": "51",
+    "name": "Restaurant 51",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "927 Pine Rd",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "32674"
+    },
+    "hours": {
+      "monday": "11 AM - 9 PM",
+      "tuesday": "12 AM - 9 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "11 AM - 4 PM",
+      "friday": "10 AM - 9 PM"
+    },
+    "contact_info": "+1-136-143-4172",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "51",
+        "user_id": "user_28",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640544"
+      },
+      {
+        "restaurant_id": "51",
+        "user_id": "user_10",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640547"
+      },
+      {
+        "restaurant_id": "51",
+        "user_id": "user_19",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640550"
+      }
+    ]
+  },
+  {
+    "_id": "52",
+    "name": "Restaurant 52",
+    "category": "Chinese",
+    "price_level": "$$$",
+    "location": {
+      "street": "503 Main St",
+      "city": "Chicago",
+      "state": "PA",
+      "zip": "88873"
+    },
+    "hours": {
+      "monday": "12 AM - 3 PM",
+      "tuesday": "12 AM - 6 PM",
+      "wednesday": "12 AM - 4 PM",
+      "thursday": "11 AM - 6 PM",
+      "friday": "12 AM - 3 PM"
+    },
+    "contact_info": "+1-222-939-6341",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "52",
+        "user_id": "user_45",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640568"
+      },
+      {
+        "restaurant_id": "52",
+        "user_id": "user_2",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640629"
+      },
+      {
+        "restaurant_id": "52",
+        "user_id": "user_7",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640633"
+      }
+    ]
+  },
+  {
+    "_id": "53",
+    "name": "Restaurant 53",
+    "category": "Mexican",
+    "price_level": "$$",
+    "location": {
+      "street": "496 Pine Rd",
+      "city": "Philadelphia",
+      "state": "FL",
+      "zip": "90972"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "12 AM - 8 PM",
+      "wednesday": "10 AM - 8 PM",
+      "thursday": "11 AM - 8 PM",
+      "friday": "11 AM - 1 PM"
+    },
+    "contact_info": "+1-113-455-3397",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "53",
+        "user_id": "user_31",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640651"
+      },
+      {
+        "restaurant_id": "53",
+        "user_id": "user_8",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640654"
+      },
+      {
+        "restaurant_id": "53",
+        "user_id": "user_37",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640658"
+      }
+    ]
+  },
+  {
+    "_id": "54",
+    "name": "Restaurant 54",
+    "category": "Vegan",
+    "price_level": "$$$$",
+    "location": {
+      "street": "892 Broadway",
+      "city": "San Antonio",
+      "state": "AZ",
+      "zip": "19977"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "12 AM - 7 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "10 AM - 5 PM",
+      "friday": "10 AM - 5 PM"
+    },
+    "contact_info": "+1-644-979-6994",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "54",
+        "user_id": "user_19",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640674"
+      },
+      {
+        "restaurant_id": "54",
+        "user_id": "user_9",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640677"
+      },
+      {
+        "restaurant_id": "54",
+        "user_id": "user_29",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640681"
+      }
+    ]
+  },
+  {
+    "_id": "55",
+    "name": "Restaurant 55",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "380 Maple Dr",
+      "city": "Houston",
+      "state": "IL",
+      "zip": "91975"
+    },
+    "hours": {
+      "monday": "10 AM - 6 PM",
+      "tuesday": "11 AM - 7 PM",
+      "wednesday": "9 AM - 8 PM",
+      "thursday": "10 AM - 1 PM",
+      "friday": "10 AM - 8 PM"
+    },
+    "contact_info": "+1-632-173-3161",
+    "description": "Taste the best traditional dishes with a modern twist.",
+    "reviews": [
+      {
+        "restaurant_id": "55",
+        "user_id": "user_42",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.640698"
+      },
+      {
+        "restaurant_id": "55",
+        "user_id": "user_16",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640701"
+      },
+      {
+        "restaurant_id": "55",
+        "user_id": "user_3",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640704"
+      }
+    ]
+  },
+  {
+    "_id": "56",
+    "name": "Restaurant 56",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "873 Sunset Blvd",
+      "city": "Phoenix",
+      "state": "MI",
+      "zip": "92118"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "9 AM - 2 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "9 AM - 3 PM",
+      "friday": "11 AM - 1 PM"
+    },
+    "contact_info": "+1-588-141-6495",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "56",
+        "user_id": "user_42",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640720"
+      },
+      {
+        "restaurant_id": "56",
+        "user_id": "user_43",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640724"
+      },
+      {
+        "restaurant_id": "56",
+        "user_id": "user_9",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640728"
+      }
+    ]
+  },
+  {
+    "_id": "57",
+    "name": "Restaurant 57",
+    "category": "Japanese",
+    "price_level": "$$$",
+    "location": {
+      "street": "664 Sunset Blvd",
+      "city": "New York",
+      "state": "OH",
+      "zip": "58185"
+    },
+    "hours": {
+      "monday": "11 AM - 1 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "12 AM - 1 PM",
+      "thursday": "10 AM - 3 PM",
+      "friday": "9 AM - 1 PM"
+    },
+    "contact_info": "+1-222-485-8739",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "57",
+        "user_id": "user_2",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640745"
+      },
+      {
+        "restaurant_id": "57",
+        "user_id": "user_26",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640748"
+      },
+      {
+        "restaurant_id": "57",
+        "user_id": "user_46",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640751"
+      }
+    ]
+  },
+  {
+    "_id": "58",
+    "name": "Restaurant 58",
+    "category": "Chinese",
+    "price_level": "$$",
+    "location": {
+      "street": "951 Sunset Blvd",
+      "city": "Houston",
+      "state": "FL",
+      "zip": "95865"
+    },
+    "hours": {
+      "monday": "11 AM - 3 PM",
+      "tuesday": "9 AM - 1 PM",
+      "wednesday": "10 AM - 1 PM",
+      "thursday": "10 AM - 8 PM",
+      "friday": "9 AM - 2 PM"
+    },
+    "contact_info": "+1-775-459-7926",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "58",
+        "user_id": "user_33",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640767"
+      },
+      {
+        "restaurant_id": "58",
+        "user_id": "user_23",
+        "rating": 4,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640825"
+      },
+      {
+        "restaurant_id": "58",
+        "user_id": "user_43",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640829"
+      }
+    ]
+  },
+  {
+    "_id": "59",
+    "name": "Restaurant 59",
+    "category": "Steakhouse",
+    "price_level": "$$$$",
+    "location": {
+      "street": "786 Sunset Blvd",
+      "city": "Philadelphia",
+      "state": "OH",
+      "zip": "16796"
+    },
+    "hours": {
+      "monday": "11 AM - 2 PM",
+      "tuesday": "12 AM - 7 PM",
+      "wednesday": "10 AM - 7 PM",
+      "thursday": "12 AM - 6 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-525-928-5307",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "59",
+        "user_id": "user_30",
+        "rating": 3,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640846"
+      },
+      {
+        "restaurant_id": "59",
+        "user_id": "user_13",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640850"
+      },
+      {
+        "restaurant_id": "59",
+        "user_id": "user_14",
+        "rating": 4,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640853"
+      }
+    ]
+  },
+  {
+    "_id": "60",
+    "name": "Restaurant 60",
+    "category": "Japanese",
+    "price_level": "$",
+    "location": {
+      "street": "111 Pine Rd",
+      "city": "San Antonio",
+      "state": "PA",
+      "zip": "34808"
+    },
+    "hours": {
+      "monday": "11 AM - 4 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "12 AM - 5 PM",
+      "thursday": "10 AM - 1 PM",
+      "friday": "11 AM - 9 PM"
+    },
+    "contact_info": "+1-577-563-8644",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "60",
+        "user_id": "user_17",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640870"
+      },
+      {
+        "restaurant_id": "60",
+        "user_id": "user_17",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640873"
+      },
+      {
+        "restaurant_id": "60",
+        "user_id": "user_15",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640876"
+      }
+    ]
+  },
+  {
+    "_id": "61",
+    "name": "Restaurant 61",
+    "category": "Steakhouse",
+    "price_level": "$$$",
+    "location": {
+      "street": "370 Maple Dr",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "93359"
+    },
+    "hours": {
+      "monday": "12 AM - 5 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "11 AM - 8 PM",
+      "thursday": "10 AM - 8 PM",
+      "friday": "12 AM - 2 PM"
+    },
+    "contact_info": "+1-780-371-1812",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "61",
+        "user_id": "user_20",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640892"
+      },
+      {
+        "restaurant_id": "61",
+        "user_id": "user_48",
+        "rating": 1,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640895"
+      },
+      {
+        "restaurant_id": "61",
+        "user_id": "user_29",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640898"
+      }
+    ]
+  },
+  {
+    "_id": "62",
+    "name": "Restaurant 62",
+    "category": "Japanese",
+    "price_level": "$$",
+    "location": {
+      "street": "81 Maple Dr",
+      "city": "Phoenix",
+      "state": "MI",
+      "zip": "19166"
+    },
+    "hours": {
+      "monday": "11 AM - 9 PM",
+      "tuesday": "10 AM - 7 PM",
+      "wednesday": "9 AM - 4 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "11 AM - 5 PM"
+    },
+    "contact_info": "+1-340-966-7140",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "62",
+        "user_id": "user_37",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640916"
+      },
+      {
+        "restaurant_id": "62",
+        "user_id": "user_9",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640919"
+      },
+      {
+        "restaurant_id": "62",
+        "user_id": "user_50",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640922"
+      }
+    ]
+  },
+  {
+    "_id": "63",
+    "name": "Restaurant 63",
+    "category": "Vegan",
+    "price_level": "$$",
+    "location": {
+      "street": "403 Broadway",
+      "city": "San Diego",
+      "state": "AZ",
+      "zip": "16380"
+    },
+    "hours": {
+      "monday": "10 AM - 4 PM",
+      "tuesday": "11 AM - 3 PM",
+      "wednesday": "12 AM - 8 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "10 AM - 3 PM"
+    },
+    "contact_info": "+1-985-188-2209",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "63",
+        "user_id": "user_8",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.640939"
+      },
+      {
+        "restaurant_id": "63",
+        "user_id": "user_30",
+        "rating": 1,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.640942"
+      },
+      {
+        "restaurant_id": "63",
+        "user_id": "user_28",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640946"
+      }
+    ]
+  },
+  {
+    "_id": "64",
+    "name": "Restaurant 64",
+    "category": "Seafood",
+    "price_level": "$$$$",
+    "location": {
+      "street": "182 Oak Ave",
+      "city": "Los Angeles",
+      "state": "NY",
+      "zip": "68128"
+    },
+    "hours": {
+      "monday": "12 AM - 3 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "11 AM - 3 PM",
+      "thursday": "9 AM - 3 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-773-844-2417",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "64",
+        "user_id": "user_31",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.640964"
+      },
+      {
+        "restaurant_id": "64",
+        "user_id": "user_24",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640967"
+      },
+      {
+        "restaurant_id": "64",
+        "user_id": "user_43",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.640971"
+      }
+    ]
+  },
+  {
+    "_id": "65",
+    "name": "Restaurant 65",
+    "category": "Indian",
+    "price_level": "$$$",
+    "location": {
+      "street": "124 Main St",
+      "city": "San Diego",
+      "state": "NY",
+      "zip": "84579"
+    },
+    "hours": {
+      "monday": "9 AM - 3 PM",
+      "tuesday": "9 AM - 1 PM",
+      "wednesday": "12 AM - 8 PM",
+      "thursday": "12 AM - 5 PM",
+      "friday": "11 AM - 2 PM"
+    },
+    "contact_info": "+1-141-740-5126",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "65",
+        "user_id": "user_15",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.640988"
+      },
+      {
+        "restaurant_id": "65",
+        "user_id": "user_50",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.640991"
+      },
+      {
+        "restaurant_id": "65",
+        "user_id": "user_39",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.640994"
+      }
+    ]
+  },
+  {
+    "_id": "66",
+    "name": "Restaurant 66",
+    "category": "Japanese",
+    "price_level": "$$$",
+    "location": {
+      "street": "734 Broadway",
+      "city": "Philadelphia",
+      "state": "NY",
+      "zip": "85287"
+    },
+    "hours": {
+      "monday": "11 AM - 7 PM",
+      "tuesday": "11 AM - 1 PM",
+      "wednesday": "11 AM - 5 PM",
+      "thursday": "9 AM - 6 PM",
+      "friday": "9 AM - 4 PM"
+    },
+    "contact_info": "+1-467-209-2241",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "66",
+        "user_id": "user_46",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641011"
+      },
+      {
+        "restaurant_id": "66",
+        "user_id": "user_12",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641015"
+      },
+      {
+        "restaurant_id": "66",
+        "user_id": "user_10",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641018"
+      }
+    ]
+  },
+  {
+    "_id": "67",
+    "name": "Restaurant 67",
+    "category": "Italian",
+    "price_level": "$",
+    "location": {
+      "street": "469 Broadway",
+      "city": "Dallas",
+      "state": "NY",
+      "zip": "59904"
+    },
+    "hours": {
+      "monday": "11 AM - 5 PM",
+      "tuesday": "11 AM - 6 PM",
+      "wednesday": "10 AM - 3 PM",
+      "thursday": "10 AM - 9 PM",
+      "friday": "9 AM - 3 PM"
+    },
+    "contact_info": "+1-259-265-7688",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "67",
+        "user_id": "user_27",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641034"
+      },
+      {
+        "restaurant_id": "67",
+        "user_id": "user_12",
+        "rating": 3,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641037"
+      },
+      {
+        "restaurant_id": "67",
+        "user_id": "user_25",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641041"
+      }
+    ]
+  },
+  {
+    "_id": "68",
+    "name": "Restaurant 68",
+    "category": "Japanese",
+    "price_level": "$",
+    "location": {
+      "street": "23 Maple Dr",
+      "city": "Philadelphia",
+      "state": "OH",
+      "zip": "47696"
+    },
+    "hours": {
+      "monday": "12 AM - 5 PM",
+      "tuesday": "10 AM - 3 PM",
+      "wednesday": "12 AM - 2 PM",
+      "thursday": "9 AM - 8 PM",
+      "friday": "11 AM - 9 PM"
+    },
+    "contact_info": "+1-424-782-7196",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "68",
+        "user_id": "user_22",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641057"
+      },
+      {
+        "restaurant_id": "68",
+        "user_id": "user_1",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641060"
+      },
+      {
+        "restaurant_id": "68",
+        "user_id": "user_24",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641063"
+      }
+    ]
+  },
+  {
+    "_id": "69",
+    "name": "Restaurant 69",
+    "category": "Vegan",
+    "price_level": "$$$$",
+    "location": {
+      "street": "304 Elm St",
+      "city": "San Diego",
+      "state": "TX",
+      "zip": "14209"
+    },
+    "hours": {
+      "monday": "10 AM - 8 PM",
+      "tuesday": "10 AM - 5 PM",
+      "wednesday": "12 AM - 7 PM",
+      "thursday": "12 AM - 4 PM",
+      "friday": "10 AM - 1 PM"
+    },
+    "contact_info": "+1-190-339-6685",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "69",
+        "user_id": "user_2",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641081"
+      },
+      {
+        "restaurant_id": "69",
+        "user_id": "user_26",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641085"
+      },
+      {
+        "restaurant_id": "69",
+        "user_id": "user_2",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641088"
+      }
+    ]
+  },
+  {
+    "_id": "70",
+    "name": "Restaurant 70",
+    "category": "Indian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "775 Oak Ave",
+      "city": "Los Angeles",
+      "state": "FL",
+      "zip": "13157"
+    },
+    "hours": {
+      "monday": "12 AM - 5 PM",
+      "tuesday": "10 AM - 1 PM",
+      "wednesday": "11 AM - 2 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "9 AM - 8 PM"
+    },
+    "contact_info": "+1-218-102-1192",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "70",
+        "user_id": "user_31",
+        "rating": 1,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641105"
+      },
+      {
+        "restaurant_id": "70",
+        "user_id": "user_23",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641108"
+      },
+      {
+        "restaurant_id": "70",
+        "user_id": "user_25",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641111"
+      }
+    ]
+  },
+  {
+    "_id": "71",
+    "name": "Restaurant 71",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "781 Maple Dr",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "35891"
+    },
+    "hours": {
+      "monday": "10 AM - 6 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "12 AM - 9 PM",
+      "thursday": "9 AM - 4 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-875-939-5195",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "71",
+        "user_id": "user_28",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641128"
+      },
+      {
+        "restaurant_id": "71",
+        "user_id": "user_22",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641131"
+      },
+      {
+        "restaurant_id": "71",
+        "user_id": "user_12",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641134"
+      }
+    ]
+  },
+  {
+    "_id": "72",
+    "name": "Restaurant 72",
+    "category": "Vegan",
+    "price_level": "$$$$",
+    "location": {
+      "street": "610 Oak Ave",
+      "city": "Chicago",
+      "state": "NY",
+      "zip": "59642"
+    },
+    "hours": {
+      "monday": "11 AM - 9 PM",
+      "tuesday": "10 AM - 9 PM",
+      "wednesday": "9 AM - 6 PM",
+      "thursday": "9 AM - 4 PM",
+      "friday": "12 AM - 5 PM"
+    },
+    "contact_info": "+1-693-958-6850",
+    "description": "Authentic recipes served in a casual environment.",
+    "reviews": [
+      {
+        "restaurant_id": "72",
+        "user_id": "user_10",
+        "rating": 2,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641151"
+      },
+      {
+        "restaurant_id": "72",
+        "user_id": "user_46",
+        "rating": 2,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641155"
+      },
+      {
+        "restaurant_id": "72",
+        "user_id": "user_42",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641158"
+      }
+    ]
+  },
+  {
+    "_id": "73",
+    "name": "Restaurant 73",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "887 Main St",
+      "city": "San Antonio",
+      "state": "NY",
+      "zip": "67184"
+    },
+    "hours": {
+      "monday": "12 AM - 5 PM",
+      "tuesday": "12 AM - 8 PM",
+      "wednesday": "9 AM - 3 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "10 AM - 9 PM"
+    },
+    "contact_info": "+1-429-626-2381",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "73",
+        "user_id": "user_19",
+        "rating": 4,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641174"
+      },
+      {
+        "restaurant_id": "73",
+        "user_id": "user_18",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641177"
+      },
+      {
+        "restaurant_id": "73",
+        "user_id": "user_27",
+        "rating": 2,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641180"
+      }
+    ]
+  },
+  {
+    "_id": "74",
+    "name": "Restaurant 74",
+    "category": "Vegan",
+    "price_level": "$$$$",
+    "location": {
+      "street": "373 Pine Rd",
+      "city": "New York",
+      "state": "FL",
+      "zip": "30422"
+    },
+    "hours": {
+      "monday": "10 AM - 3 PM",
+      "tuesday": "12 AM - 9 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "11 AM - 3 PM",
+      "friday": "11 AM - 4 PM"
+    },
+    "contact_info": "+1-561-460-4766",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "74",
+        "user_id": "user_50",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641197"
+      },
+      {
+        "restaurant_id": "74",
+        "user_id": "user_20",
+        "rating": 1,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641200"
+      },
+      {
+        "restaurant_id": "74",
+        "user_id": "user_38",
+        "rating": 4,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641204"
+      }
+    ]
+  },
+  {
+    "_id": "75",
+    "name": "Restaurant 75",
+    "category": "Indian",
+    "price_level": "$",
+    "location": {
+      "street": "809 Maple Dr",
+      "city": "Dallas",
+      "state": "IL",
+      "zip": "92066"
+    },
+    "hours": {
+      "monday": "12 AM - 7 PM",
+      "tuesday": "11 AM - 3 PM",
+      "wednesday": "9 AM - 4 PM",
+      "thursday": "9 AM - 7 PM",
+      "friday": "11 AM - 7 PM"
+    },
+    "contact_info": "+1-596-227-7781",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "75",
+        "user_id": "user_32",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641222"
+      },
+      {
+        "restaurant_id": "75",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641225"
+      },
+      {
+        "restaurant_id": "75",
+        "user_id": "user_10",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641230"
+      }
+    ]
+  },
+  {
+    "_id": "76",
+    "name": "Restaurant 76",
+    "category": "Vegan",
+    "price_level": "$$$",
+    "location": {
+      "street": "376 Oak Ave",
+      "city": "Los Angeles",
+      "state": "AZ",
+      "zip": "28365"
+    },
+    "hours": {
+      "monday": "9 AM - 3 PM",
+      "tuesday": "9 AM - 8 PM",
+      "wednesday": "9 AM - 8 PM",
+      "thursday": "9 AM - 7 PM",
+      "friday": "9 AM - 4 PM"
+    },
+    "contact_info": "+1-142-452-8315",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "76",
+        "user_id": "user_39",
+        "rating": 4,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641247"
+      },
+      {
+        "restaurant_id": "76",
+        "user_id": "user_46",
+        "rating": 2,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641251"
+      },
+      {
+        "restaurant_id": "76",
+        "user_id": "user_15",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641254"
+      }
+    ]
+  },
+  {
+    "_id": "77",
+    "name": "Restaurant 77",
+    "category": "Mexican",
+    "price_level": "$$$",
+    "location": {
+      "street": "950 Elm St",
+      "city": "Los Angeles",
+      "state": "FL",
+      "zip": "54989"
+    },
+    "hours": {
+      "monday": "10 AM - 6 PM",
+      "tuesday": "10 AM - 8 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "11 AM - 1 PM",
+      "friday": "12 AM - 6 PM"
+    },
+    "contact_info": "+1-522-339-3874",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "77",
+        "user_id": "user_34",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641271"
+      },
+      {
+        "restaurant_id": "77",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641274"
+      },
+      {
+        "restaurant_id": "77",
+        "user_id": "user_23",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641278"
+      }
+    ]
+  },
+  {
+    "_id": "78",
+    "name": "Restaurant 78",
+    "category": "Indian",
+    "price_level": "$",
+    "location": {
+      "street": "217 Sunset Blvd",
+      "city": "Chicago",
+      "state": "FL",
+      "zip": "98270"
+    },
+    "hours": {
+      "monday": "9 AM - 4 PM",
+      "tuesday": "11 AM - 8 PM",
+      "wednesday": "10 AM - 9 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "10 AM - 1 PM"
+    },
+    "contact_info": "+1-741-651-9069",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "78",
+        "user_id": "user_3",
+        "rating": 4,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641296"
+      },
+      {
+        "restaurant_id": "78",
+        "user_id": "user_9",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641300"
+      },
+      {
+        "restaurant_id": "78",
+        "user_id": "user_31",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641303"
+      }
+    ]
+  },
+  {
+    "_id": "79",
+    "name": "Restaurant 79",
+    "category": "Steakhouse",
+    "price_level": "$$$",
+    "location": {
+      "street": "441 Sunset Blvd",
+      "city": "San Diego",
+      "state": "TX",
+      "zip": "47275"
+    },
+    "hours": {
+      "monday": "10 AM - 5 PM",
+      "tuesday": "11 AM - 5 PM",
+      "wednesday": "9 AM - 8 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "10 AM - 6 PM"
+    },
+    "contact_info": "+1-365-917-6294",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "79",
+        "user_id": "user_27",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641319"
+      },
+      {
+        "restaurant_id": "79",
+        "user_id": "user_50",
+        "rating": 3,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641322"
+      },
+      {
+        "restaurant_id": "79",
+        "user_id": "user_43",
+        "rating": 3,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641326"
+      }
+    ]
+  },
+  {
+    "_id": "80",
+    "name": "Restaurant 80",
+    "category": "Indian",
+    "price_level": "$",
+    "location": {
+      "street": "726 Maple Dr",
+      "city": "Dallas",
+      "state": "CA",
+      "zip": "56883"
+    },
+    "hours": {
+      "monday": "10 AM - 1 PM",
+      "tuesday": "10 AM - 6 PM",
+      "wednesday": "12 AM - 8 PM",
+      "thursday": "10 AM - 7 PM",
+      "friday": "12 AM - 1 PM"
+    },
+    "contact_info": "+1-718-667-6979",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "80",
+        "user_id": "user_30",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641343"
+      },
+      {
+        "restaurant_id": "80",
+        "user_id": "user_38",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641346"
+      },
+      {
+        "restaurant_id": "80",
+        "user_id": "user_33",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641349"
+      }
+    ]
+  },
+  {
+    "_id": "81",
+    "name": "Restaurant 81",
+    "category": "Vegan",
+    "price_level": "$$",
+    "location": {
+      "street": "543 Maple Dr",
+      "city": "Chicago",
+      "state": "CA",
+      "zip": "16113"
+    },
+    "hours": {
+      "monday": "9 AM - 9 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "10 AM - 6 PM",
+      "thursday": "12 AM - 8 PM",
+      "friday": "12 AM - 2 PM"
+    },
+    "contact_info": "+1-548-354-7475",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "81",
+        "user_id": "user_37",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641366"
+      },
+      {
+        "restaurant_id": "81",
+        "user_id": "user_21",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641369"
+      },
+      {
+        "restaurant_id": "81",
+        "user_id": "user_34",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641374"
+      }
+    ]
+  },
+  {
+    "_id": "82",
+    "name": "Restaurant 82",
+    "category": "Italian",
+    "price_level": "$$$",
+    "location": {
+      "street": "988 Sunset Blvd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "12951"
+    },
+    "hours": {
+      "monday": "11 AM - 8 PM",
+      "tuesday": "9 AM - 5 PM",
+      "wednesday": "12 AM - 1 PM",
+      "thursday": "11 AM - 6 PM",
+      "friday": "12 AM - 4 PM"
+    },
+    "contact_info": "+1-946-741-9704",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "82",
+        "user_id": "user_35",
+        "rating": 5,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641390"
+      },
+      {
+        "restaurant_id": "82",
+        "user_id": "user_17",
+        "rating": 3,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641393"
+      },
+      {
+        "restaurant_id": "82",
+        "user_id": "user_48",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641396"
+      }
+    ]
+  },
+  {
+    "_id": "83",
+    "name": "Restaurant 83",
+    "category": "Seafood",
+    "price_level": "$$$",
+    "location": {
+      "street": "580 Maple Dr",
+      "city": "Chicago",
+      "state": "MI",
+      "zip": "85985"
+    },
+    "hours": {
+      "monday": "10 AM - 3 PM",
+      "tuesday": "12 AM - 1 PM",
+      "wednesday": "11 AM - 5 PM",
+      "thursday": "11 AM - 1 PM",
+      "friday": "12 AM - 7 PM"
+    },
+    "contact_info": "+1-989-640-4637",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "83",
+        "user_id": "user_16",
+        "rating": 1,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641413"
+      },
+      {
+        "restaurant_id": "83",
+        "user_id": "user_48",
+        "rating": 3,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641416"
+      },
+      {
+        "restaurant_id": "83",
+        "user_id": "user_1",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641420"
+      }
+    ]
+  },
+  {
+    "_id": "84",
+    "name": "Restaurant 84",
+    "category": "Chinese",
+    "price_level": "$",
+    "location": {
+      "street": "715 Sunset Blvd",
+      "city": "San Antonio",
+      "state": "NY",
+      "zip": "46054"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "10 AM - 4 PM",
+      "wednesday": "12 AM - 2 PM",
+      "thursday": "9 AM - 9 PM",
+      "friday": "10 AM - 8 PM"
+    },
+    "contact_info": "+1-480-917-3230",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "84",
+        "user_id": "user_49",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641437"
+      },
+      {
+        "restaurant_id": "84",
+        "user_id": "user_29",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641440"
+      },
+      {
+        "restaurant_id": "84",
+        "user_id": "user_13",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641443"
+      }
+    ]
+  },
+  {
+    "_id": "85",
+    "name": "Restaurant 85",
+    "category": "Italian",
+    "price_level": "$$$$",
+    "location": {
+      "street": "213 Oak Ave",
+      "city": "New York",
+      "state": "PA",
+      "zip": "45778"
+    },
+    "hours": {
+      "monday": "12 AM - 1 PM",
+      "tuesday": "12 AM - 7 PM",
+      "wednesday": "12 AM - 4 PM",
+      "thursday": "10 AM - 4 PM",
+      "friday": "12 AM - 1 PM"
+    },
+    "contact_info": "+1-661-200-8496",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "85",
+        "user_id": "user_35",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641461"
+      },
+      {
+        "restaurant_id": "85",
+        "user_id": "user_45",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641464"
+      },
+      {
+        "restaurant_id": "85",
+        "user_id": "user_47",
+        "rating": 5,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641467"
+      }
+    ]
+  },
+  {
+    "_id": "86",
+    "name": "Restaurant 86",
+    "category": "American",
+    "price_level": "$$$",
+    "location": {
+      "street": "108 Oak Ave",
+      "city": "Dallas",
+      "state": "MI",
+      "zip": "43407"
+    },
+    "hours": {
+      "monday": "11 AM - 5 PM",
+      "tuesday": "10 AM - 5 PM",
+      "wednesday": "9 AM - 7 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "9 AM - 1 PM"
+    },
+    "contact_info": "+1-772-363-2841",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "86",
+        "user_id": "user_12",
+        "rating": 3,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641484"
+      },
+      {
+        "restaurant_id": "86",
+        "user_id": "user_35",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641487"
+      },
+      {
+        "restaurant_id": "86",
+        "user_id": "user_27",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641490"
+      }
+    ]
+  },
+  {
+    "_id": "87",
+    "name": "Restaurant 87",
+    "category": "Italian",
+    "price_level": "$$$",
+    "location": {
+      "street": "992 Elm St",
+      "city": "New York",
+      "state": "IL",
+      "zip": "18075"
+    },
+    "hours": {
+      "monday": "11 AM - 6 PM",
+      "tuesday": "10 AM - 9 PM",
+      "wednesday": "10 AM - 3 PM",
+      "thursday": "10 AM - 8 PM",
+      "friday": "9 AM - 5 PM"
+    },
+    "contact_info": "+1-558-686-1477",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "87",
+        "user_id": "user_11",
+        "rating": 5,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641507"
+      },
+      {
+        "restaurant_id": "87",
+        "user_id": "user_46",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641561"
+      },
+      {
+        "restaurant_id": "87",
+        "user_id": "user_1",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641575"
+      }
+    ]
+  },
+  {
+    "_id": "88",
+    "name": "Restaurant 88",
+    "category": "Steakhouse",
+    "price_level": "$$$$",
+    "location": {
+      "street": "250 Elm St",
+      "city": "San Diego",
+      "state": "OH",
+      "zip": "57205"
+    },
+    "hours": {
+      "monday": "12 AM - 8 PM",
+      "tuesday": "11 AM - 7 PM",
+      "wednesday": "9 AM - 8 PM",
+      "thursday": "12 AM - 1 PM",
+      "friday": "12 AM - 8 PM"
+    },
+    "contact_info": "+1-769-676-7007",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "88",
+        "user_id": "user_49",
+        "rating": 2,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641602"
+      },
+      {
+        "restaurant_id": "88",
+        "user_id": "user_12",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641606"
+      },
+      {
+        "restaurant_id": "88",
+        "user_id": "user_4",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641609"
+      }
+    ]
+  },
+  {
+    "_id": "89",
+    "name": "Restaurant 89",
+    "category": "American",
+    "price_level": "$$$$",
+    "location": {
+      "street": "619 Maple Dr",
+      "city": "Chicago",
+      "state": "FL",
+      "zip": "17910"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "12 AM - 1 PM",
+      "wednesday": "9 AM - 1 PM",
+      "thursday": "12 AM - 9 PM",
+      "friday": "11 AM - 2 PM"
+    },
+    "contact_info": "+1-720-385-5210",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "89",
+        "user_id": "user_34",
+        "rating": 1,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641626"
+      },
+      {
+        "restaurant_id": "89",
+        "user_id": "user_16",
+        "rating": 4,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641631"
+      },
+      {
+        "restaurant_id": "89",
+        "user_id": "user_39",
+        "rating": 2,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641635"
+      }
+    ]
+  },
+  {
+    "_id": "90",
+    "name": "Restaurant 90",
+    "category": "Japanese",
+    "price_level": "$$",
+    "location": {
+      "street": "285 Pine Rd",
+      "city": "Philadelphia",
+      "state": "FL",
+      "zip": "88420"
+    },
+    "hours": {
+      "monday": "12 AM - 9 PM",
+      "tuesday": "11 AM - 3 PM",
+      "wednesday": "9 AM - 2 PM",
+      "thursday": "11 AM - 7 PM",
+      "friday": "11 AM - 4 PM"
+    },
+    "contact_info": "+1-970-301-7665",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "90",
+        "user_id": "user_26",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641652"
+      },
+      {
+        "restaurant_id": "90",
+        "user_id": "user_28",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641655"
+      },
+      {
+        "restaurant_id": "90",
+        "user_id": "user_33",
+        "rating": 5,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641658"
+      }
+    ]
+  },
+  {
+    "_id": "91",
+    "name": "Restaurant 91",
+    "category": "Chinese",
+    "price_level": "$$",
+    "location": {
+      "street": "769 Sunset Blvd",
+      "city": "Chicago",
+      "state": "TX",
+      "zip": "35456"
+    },
+    "hours": {
+      "monday": "12 AM - 6 PM",
+      "tuesday": "9 AM - 9 PM",
+      "wednesday": "11 AM - 7 PM",
+      "thursday": "11 AM - 8 PM",
+      "friday": "11 AM - 5 PM"
+    },
+    "contact_info": "+1-628-215-8760",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "91",
+        "user_id": "user_25",
+        "rating": 2,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641679"
+      },
+      {
+        "restaurant_id": "91",
+        "user_id": "user_20",
+        "rating": 4,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641682"
+      },
+      {
+        "restaurant_id": "91",
+        "user_id": "user_32",
+        "rating": 2,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641686"
+      }
+    ]
+  },
+  {
+    "_id": "92",
+    "name": "Restaurant 92",
+    "category": "Vegan",
+    "price_level": "$",
+    "location": {
+      "street": "807 Sunset Blvd",
+      "city": "San Diego",
+      "state": "FL",
+      "zip": "83867"
+    },
+    "hours": {
+      "monday": "10 AM - 5 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "11 AM - 6 PM",
+      "thursday": "11 AM - 5 PM",
+      "friday": "11 AM - 2 PM"
+    },
+    "contact_info": "+1-681-561-5384",
+    "description": "A family-friendly restaurant with something for everyone.",
+    "reviews": [
+      {
+        "restaurant_id": "92",
+        "user_id": "user_13",
+        "rating": 2,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641702"
+      },
+      {
+        "restaurant_id": "92",
+        "user_id": "user_45",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641705"
+      },
+      {
+        "restaurant_id": "92",
+        "user_id": "user_21",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641708"
+      }
+    ]
+  },
+  {
+    "_id": "93",
+    "name": "Restaurant 93",
+    "category": "American",
+    "price_level": "$",
+    "location": {
+      "street": "482 Pine Rd",
+      "city": "Los Angeles",
+      "state": "TX",
+      "zip": "82695"
+    },
+    "hours": {
+      "monday": "12 AM - 8 PM",
+      "tuesday": "9 AM - 7 PM",
+      "wednesday": "10 AM - 7 PM",
+      "thursday": "12 AM - 6 PM",
+      "friday": "9 AM - 7 PM"
+    },
+    "contact_info": "+1-356-680-1473",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "93",
+        "user_id": "user_14",
+        "rating": 2,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641724"
+      },
+      {
+        "restaurant_id": "93",
+        "user_id": "user_35",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641727"
+      },
+      {
+        "restaurant_id": "93",
+        "user_id": "user_37",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641731"
+      }
+    ]
+  },
+  {
+    "_id": "94",
+    "name": "Restaurant 94",
+    "category": "Chinese",
+    "price_level": "$",
+    "location": {
+      "street": "875 Main St",
+      "city": "New York",
+      "state": "IL",
+      "zip": "48181"
+    },
+    "hours": {
+      "monday": "11 AM - 5 PM",
+      "tuesday": "12 AM - 3 PM",
+      "wednesday": "11 AM - 7 PM",
+      "thursday": "10 AM - 6 PM",
+      "friday": "9 AM - 3 PM"
+    },
+    "contact_info": "+1-765-820-7948",
+    "description": "Delicious and fresh ingredients served daily.",
+    "reviews": [
+      {
+        "restaurant_id": "94",
+        "user_id": "user_16",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641751"
+      },
+      {
+        "restaurant_id": "94",
+        "user_id": "user_43",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641755"
+      },
+      {
+        "restaurant_id": "94",
+        "user_id": "user_4",
+        "rating": 4,
+        "comment": "Very disappointing, the food was cold and bland.",
+        "timestamp": "2024-12-06T20:36:00.641758"
+      }
+    ]
+  },
+  {
+    "_id": "95",
+    "name": "Restaurant 95",
+    "category": "Seafood",
+    "price_level": "$",
+    "location": {
+      "street": "6 Maple Dr",
+      "city": "San Diego",
+      "state": "NY",
+      "zip": "69694"
+    },
+    "hours": {
+      "monday": "9 AM - 4 PM",
+      "tuesday": "10 AM - 2 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "10 AM - 4 PM",
+      "friday": "11 AM - 3 PM"
+    },
+    "contact_info": "+1-456-378-9922",
+    "description": "Fine dining with an exquisite selection of dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "95",
+        "user_id": "user_20",
+        "rating": 3,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641775"
+      },
+      {
+        "restaurant_id": "95",
+        "user_id": "user_22",
+        "rating": 3,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641778"
+      },
+      {
+        "restaurant_id": "95",
+        "user_id": "user_49",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641781"
+      }
+    ]
+  },
+  {
+    "_id": "96",
+    "name": "Restaurant 96",
+    "category": "Italian",
+    "price_level": "$",
+    "location": {
+      "street": "627 Maple Dr",
+      "city": "Houston",
+      "state": "PA",
+      "zip": "24838"
+    },
+    "hours": {
+      "monday": "9 AM - 7 PM",
+      "tuesday": "11 AM - 3 PM",
+      "wednesday": "12 AM - 3 PM",
+      "thursday": "11 AM - 2 PM",
+      "friday": "10 AM - 8 PM"
+    },
+    "contact_info": "+1-548-553-5557",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "96",
+        "user_id": "user_49",
+        "rating": 1,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641796"
+      },
+      {
+        "restaurant_id": "96",
+        "user_id": "user_45",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641799"
+      },
+      {
+        "restaurant_id": "96",
+        "user_id": "user_13",
+        "rating": 5,
+        "comment": "Great food, would definitely come back!",
+        "timestamp": "2024-12-06T20:36:00.641802"
+      }
+    ]
+  },
+  {
+    "_id": "97",
+    "name": "Restaurant 97",
+    "category": "Japanese",
+    "price_level": "$",
+    "location": {
+      "street": "451 Elm St",
+      "city": "New York",
+      "state": "AZ",
+      "zip": "54810"
+    },
+    "hours": {
+      "monday": "11 AM - 9 PM",
+      "tuesday": "10 AM - 5 PM",
+      "wednesday": "12 AM - 1 PM",
+      "thursday": "10 AM - 4 PM",
+      "friday": "10 AM - 2 PM"
+    },
+    "contact_info": "+1-291-975-2424",
+    "description": "Relaxing atmosphere with flavorful dishes.",
+    "reviews": [
+      {
+        "restaurant_id": "97",
+        "user_id": "user_39",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641818"
+      },
+      {
+        "restaurant_id": "97",
+        "user_id": "user_44",
+        "rating": 5,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641822"
+      },
+      {
+        "restaurant_id": "97",
+        "user_id": "user_41",
+        "rating": 2,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641825"
+      }
+    ]
+  },
+  {
+    "_id": "98",
+    "name": "Restaurant 98",
+    "category": "Italian",
+    "price_level": "$$",
+    "location": {
+      "street": "431 Main St",
+      "city": "Houston",
+      "state": "NY",
+      "zip": "71412"
+    },
+    "hours": {
+      "monday": "12 AM - 2 PM",
+      "tuesday": "12 AM - 4 PM",
+      "wednesday": "11 AM - 9 PM",
+      "thursday": "12 AM - 2 PM",
+      "friday": "12 AM - 5 PM"
+    },
+    "contact_info": "+1-318-643-9436",
+    "description": "Healthy and fresh ingredients to make every meal a delight.",
+    "reviews": [
+      {
+        "restaurant_id": "98",
+        "user_id": "user_43",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641842"
+      },
+      {
+        "restaurant_id": "98",
+        "user_id": "user_19",
+        "rating": 1,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641845"
+      },
+      {
+        "restaurant_id": "98",
+        "user_id": "user_4",
+        "rating": 1,
+        "comment": "Good value for the price, but the portions were small.",
+        "timestamp": "2024-12-06T20:36:00.641848"
+      }
+    ]
+  },
+  {
+    "_id": "99",
+    "name": "Restaurant 99",
+    "category": "Chinese",
+    "price_level": "$$",
+    "location": {
+      "street": "544 Pine Rd",
+      "city": "Los Angeles",
+      "state": "NY",
+      "zip": "28715"
+    },
+    "hours": {
+      "monday": "9 AM - 9 PM",
+      "tuesday": "9 AM - 1 PM",
+      "wednesday": "10 AM - 8 PM",
+      "thursday": "9 AM - 3 PM",
+      "friday": "9 AM - 3 PM"
+    },
+    "contact_info": "+1-299-772-8247",
+    "description": "Gourmet meals with a touch of elegance.",
+    "reviews": [
+      {
+        "restaurant_id": "99",
+        "user_id": "user_24",
+        "rating": 1,
+        "comment": "Amazing flavors and friendly staff!",
+        "timestamp": "2024-12-06T20:36:00.641864"
+      },
+      {
+        "restaurant_id": "99",
+        "user_id": "user_33",
+        "rating": 5,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641867"
+      },
+      {
+        "restaurant_id": "99",
+        "user_id": "user_38",
+        "rating": 5,
+        "comment": "The best meal I've had in a long time!",
+        "timestamp": "2024-12-06T20:36:00.641870"
+      }
+    ]
+  },
+  {
+    "_id": "100",
+    "name": "Restaurant 100",
+    "category": "Vegan",
+    "price_level": "$$$",
+    "location": {
+      "street": "278 Oak Ave",
+      "city": "New York",
+      "state": "AZ",
+      "zip": "26095"
+    },
+    "hours": {
+      "monday": "10 AM - 5 PM",
+      "tuesday": "12 AM - 2 PM",
+      "wednesday": "9 AM - 6 PM",
+      "thursday": "9 AM - 4 PM",
+      "friday": "10 AM - 3 PM"
+    },
+    "contact_info": "+1-731-145-4643",
+    "description": "A cozy place with delicious food.",
+    "reviews": [
+      {
+        "restaurant_id": "100",
+        "user_id": "user_37",
+        "rating": 4,
+        "comment": "Not as good as expected, but still decent.",
+        "timestamp": "2024-12-06T20:36:00.641888"
+      },
+      {
+        "restaurant_id": "100",
+        "user_id": "user_29",
+        "rating": 4,
+        "comment": "Excellent experience, highly recommend this place.",
+        "timestamp": "2024-12-06T20:36:00.641891"
+      },
+      {
+        "restaurant_id": "100",
+        "user_id": "user_7",
+        "rating": 2,
+        "comment": "The atmosphere was perfect, but the service was slow.",
+        "timestamp": "2024-12-06T20:36:00.641894"
+      }
+    ]
+  }
+]
