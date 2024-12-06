@@ -6,12 +6,8 @@ import StarRating from "./StarRating";
 
 const RestaurantList = (props) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
-<<<<<<< HEAD
-  let history = useNavigate();
-=======
   const navigate = useNavigate();
 
->>>>>>> 8ae46f2 (new search bar)
   useEffect(() => {
     const fetchData = async () => {
       try {

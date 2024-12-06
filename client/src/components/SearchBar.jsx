@@ -1,17 +1,49 @@
 import React, { useState } from 'react';
-import RestaurantCard from './RestaurantCard'; // Adjust the import if necessary
+import RestaurantCard from './RestaurantCard';
 
 // Mock data for restaurants
 const restaurants = [
-  { id: 1, name: 'Pasta Palace', zipcode: '12345', category: 'Italian', rating: 4.5, price: '$$', reviews: ['Great food!', 'Loved the ambiance.'] },
-  { id: 2, name: 'Sushi World', zipcode: '12345', category: 'Japanese', rating: 4.7, price: '$$$', reviews: ['Best sushi in town!', 'Fresh and delicious.'] },
-  { id: 3, name: 'Burger Haven', zipcode: '54321', category: 'American', rating: 4.2, price: '$', reviews: ['Juicy burgers!', 'Fast service.'] },
-  { id: 4, name: 'Curry Corner', zipcode: '67890', category: 'Indian', rating: 4.8, price: '$$', reviews: ['Amazing curry!', 'Spicy and flavorful.'] },
+  {
+    "id": 1,
+    "name": "Pasta Palace",
+    "zipcode": "12345",
+    "category": "Italian",
+    "rating": 4.5,
+    "price": "$$",
+    "reviews": ["Great food!", "Loved the ambiance."]
+  },
+  {
+    "id": 2,
+    "name": "Sushi World",
+    "zipcode": "12345",
+    "category": "Japanese",
+    "rating": 4.7,
+    "price": "$$$",
+    "reviews": ["Best sushi in town!", "Fresh and delicious."]
+  },
+  {
+    "id": 3,
+    "name": "Burger Haven",
+    "zipcode": "54321",
+    "category": "American",
+    "rating": 4.2,
+    "price": "$",
+    "reviews": ["Juicy burgers!", "Fast service."]
+  },
+  {
+    "id": 4,
+    "name": "Curry Corner",
+    "zipcode": "67890",
+    "category": "Indian",
+    "rating": 4.8,
+    "price": "$$",
+    "reviews": ["Amazing curry!", "Spicy and flavorful."]
+  }
 ];
 
 const SearchBar = () => {
-  const [searchCriteria, setSearchCriteria] = useState('name'); // Default search criteria
-  const [inputValue, setInputValue] = useState('');
+  const [searchCriteria, setSearchCriteria] = useState("name");
+  const [inputValue, setInputValue] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const handleInputChange = (event) => {
@@ -20,16 +52,16 @@ const SearchBar = () => {
 
   const handleSearch = () => {
     const results = restaurants.filter((restaurant) => {
-      if (searchCriteria === 'name') {
+      if (searchCriteria === "name") {
         return restaurant.name.toLowerCase().includes(inputValue.toLowerCase());
-      } else if (searchCriteria === 'zipcode') {
+      } else if (searchCriteria === "zipcode") {
         return restaurant.zipcode.includes(inputValue);
-      } else if (searchCriteria === 'category') {
+      } else if (searchCriteria === "category") {
         return restaurant.category.toLowerCase().includes(inputValue.toLowerCase());
-      } else if (searchCriteria === 'rating') {
-        return restaurant.rating.toString() === inputValue; // Exact match for rating
-      } else if (searchCriteria === 'price') {
-        return restaurant.price === inputValue; // Exact match for price
+      } else if (searchCriteria === "rating") {
+        return restaurant.rating.toString() === inputValue;
+      } else if (searchCriteria === "price") {
+        return restaurant.price === inputValue;
       }
       return false;
     });
@@ -76,40 +108,40 @@ const SearchBar = () => {
 
 // Inline styles
 const styles = {
-  container: {
-    padding: '16px',
+  "container": {
+    "padding": "16px"
   },
-  select: {
-    marginBottom: '16px',
-    padding: '8px',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-    fontSize: '16px',
+  "select": {
+    "marginBottom": "16px",
+    "padding": "8px",
+    "borderRadius": "4px",
+    "border": "1px solid #ccc",
+    "fontSize": "16px"
   },
-  input: {
-    height: '40px',
-    borderWidth: '1px',
-    borderColor: '#ccc',
-    borderRadius: '8px',
-    paddingHorizontal: '12px',
-    marginBottom: '16px',
-    fontSize: '16px',
-    backgroundColor: 'white',
-    width: '100%',
+  "input": {
+    "height": "40px",
+    "borderWidth": "1px",
+    "borderColor": "#ccc",
+    "borderRadius": "8px",
+    "paddingHorizontal": "12px",
+    "marginBottom": "16px",
+    "fontSize": "16px",
+    "backgroundColor": "white",
+    "width": "100%"
   },
-  button: {
-    padding: '10px 15px',
-    borderRadius: '4px',
-    backgroundColor: '#007BFF',
-    color: 'white',
-    border: 'none',
-    cursor: 'pointer',
+  "button": {
+    "padding": "10px 15px",
+    "borderRadius": "4px",
+    "backgroundColor": "#007BFF",
+    "color": "white",
+    "border": "none",
+    "cursor": "pointer"
   },
-  noResults: {
-    textAlign: 'center',
-    color: '#666',
-    marginTop: '16px',
-  },
+  "noResults": {
+    "textAlign": "center",
+    "color": "#666",
+    "marginTop": "16px"
+  }
 };
 
-export default SearchBar; 
+export default SearchBar;

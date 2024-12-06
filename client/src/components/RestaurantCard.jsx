@@ -1,5 +1,3 @@
-// components/RestaurantCard.js
-
 import React from 'react';
 import Review2 from './Review2';
 

@@ -7,10 +7,6 @@ const AddReview = () => {
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
-<<<<<<< HEAD
-  const history = useNavigate();
-=======
->>>>>>> 8ae46f2 (new search bar)
   console.log(id);
 
   const [name, setName] = useState("");

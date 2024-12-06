@@ -5,11 +5,7 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 
 const UpdateRestaurant = (props) => {
   const { id } = useParams();
-<<<<<<< HEAD
-  let history = useNavigate();
-=======
   const navigate = useNavigate();
->>>>>>> 8ae46f2 (new search bar)
   const { restaurants } = useContext(RestaurantsContext);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
