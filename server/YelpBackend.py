@@ -28,42 +28,111 @@ def register_user():
     except DuplicateKeyError:
         return jsonify({"error": "Email already registered"}), 400
 
-
-# Add a new restaurant
+#Add a restaurant
 @app.route("/business/restaurants", methods=["POST"])
 def add_restaurant():
-    data = request.json
-    restaurant = {
-        "name": data["name"],
-        "category": data["category"],
-        "price_level": data["price_level"],
-        "location": data["location"],
-        "contact_info": data.get("contact_info"),
-        "hours": data.get("hours"),
-        "description": data.get("description"),
-        "photos": data.get("photos", []),
-        "owner_id": data["owner_id"]
-    }
-    result = db.restaurants.insert_one(restaurant)
-    return jsonify({"msg": "Restaurant added", "restaurant_id": str(result.inserted_id)}), 201
-
-# Add a review
-@app.route("/reviews", methods=["POST"])
-def add_review():
-    data = request.json
-    review = {
-        "restaurant_id": data["restaurant_id"], 
-        "user_id": data["user_id"], 
-        "rating": data["rating"],  
-        "comment": data.get("comment", ""),  
-        "timestamp": data.get("timestamp", None) 
-    }
-    
     try:
-        result = db.reviews.insert_one(review)
-        return jsonify({"msg": "Review added", "review_id": str(result.inserted_id)}), 201
+        # Retrieve the restaurant data from the request
+        data = request.get_json()
+
+        # Check if the data is a list (multiple restaurants)
+        if isinstance(data, list):
+            # If it's a list, iterate over each restaurant and insert it
+            inserted_ids = []
+            for restaurant_data in data:
+                # Create the restaurant document for each entry
+                restaurant = {
+                    "name": restaurant_data.get("name"),
+                    "category": restaurant_data.get("category"),
+                    "price_level": restaurant_data.get("price_level"),
+                    "location": restaurant_data.get("location"),
+                    "contact_info": restaurant_data.get("contact_info"),
+                    "hours": restaurant_data.get("hours"),
+                    "description": restaurant_data.get("description"),
+                    "photos": restaurant_data.get("photos", []),
+                    "owner_id": restaurant_data.get("owner_id")
+                }
+
+                # Insert the restaurant into the database
+                result = db.restaurants.insert_one(restaurant)
+                restaurant_id = str(result.inserted_id)
+
+                # Insert reviews if any are provided
+                reviews = restaurant_data.get("reviews", [])
+                inserted_review_ids = []
+                for review in reviews:
+                    # Include the restaurant_id in the review document
+                    review_data = {
+                        "restaurant_id": restaurant_id,
+                        "user_id": review.get("user_id"),
+                        "rating": review.get("rating"),
+                        "comment": review.get("comment"),
+                        "timestamp": review.get("timestamp")
+                    }
+                    # Insert the review into the reviews collection
+                    review_result = db.reviews.insert_one(review_data)
+                    inserted_review_ids.append(str(review_result.inserted_id))
+
+                # Add the review ids to the restaurant document
+                db.restaurants.update_one(
+                    {"_id": ObjectId(restaurant_id)},
+                    {"$set": {"reviews": inserted_review_ids}}
+                )
+
+                inserted_ids.append(restaurant_id)
+
+            return jsonify({"msg": "Restaurants added", "restaurant_ids": inserted_ids}), 201
+
+        elif isinstance(data, dict):
+            # If it's a single restaurant object (dict), insert it directly
+            restaurant = {
+                "name": data.get("name"),
+                "category": data.get("category"),
+                "price_level": data.get("price_level"),
+                "location": data.get("location"),
+                "contact_info": data.get("contact_info"),
+                "hours": data.get("hours"),
+                "description": data.get("description"),
+                "photos": data.get("photos", []),
+                "owner_id": data.get("owner_id")
+            }
+
+            # Insert the restaurant into the database
+            result = db.restaurants.insert_one(restaurant)
+            restaurant_id = str(result.inserted_id)
+
+            # Insert reviews if any are provided
+            reviews = data.get("reviews", [])
+            inserted_review_ids = []
+            for review in reviews:
+                # Include the restaurant_id in the review document
+                review_data = {
+                    "restaurant_id": restaurant_id,
+                    "user_id": review.get("user_id"),
+                    "rating": review.get("rating"),
+                    "comment": review.get("comment"),
+                    "timestamp": review.get("timestamp")
+                }
+                # Insert the review into the reviews collection
+                review_result = db.reviews.insert_one(review_data)
+                inserted_review_ids.append(str(review_result.inserted_id))
+
+            # Add the review ids to the restaurant document
+            db.restaurants.update_one(
+                {"_id": ObjectId(restaurant_id)},
+                {"$set": {"reviews": inserted_review_ids}}
+            )
+
+            return jsonify({"msg": "Restaurant added", "restaurant_id": restaurant_id}), 201
+
+        else:
+            # If neither a list nor a dict, return an error
+            return jsonify({"error": "Invalid input, expected an object or an array of restaurants"}), 400
+
     except Exception as e:
+        # Return an error message with status code 400 if an exception occurs
         return jsonify({"error": str(e)}), 400
+
     
 @app.route("/search_restaurants", methods=["GET"])
 def search_restaurants():
@@ -115,10 +184,18 @@ def get_restaurant_reviews(restaurant_id):
         # Add reviews to the restaurant details
         restaurant["reviews"] = reviews
 
+        # Calculate average rating from reviews
+        if reviews:
+            average_rating = sum([review["rating"] for review in reviews]) / len(reviews)
+            restaurant["average_rating"] = round(average_rating, 2)  # Round to 2 decimal places
+        else:
+            restaurant["average_rating"] = None  # No reviews, so no average
+
         return jsonify(restaurant), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 # Reviews
 @app.route("/reviews", methods=["GET"])
