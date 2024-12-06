@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from pymongo.errors import DuplicateKeyError
 from bson import ObjectId
 from database import db
-
+import requests
 app = Flask(__name__)
 
 
@@ -148,7 +148,58 @@ def get_users():
 def hello():
     return "App is running!"
 
+GOOGLE_API_KEY = "AIzaSyCdAoRJ_UdjKER07LE9Q3YnykkIOSM7Roc"
+
+@app.route("/restaurants_by_zip", methods=["GET"])
+def restaurants_by_zip():
+    # Get ZIP code from query parameters
+    zipcode = request.args.get("zipcode")
+    if not zipcode:
+        return jsonify({"error": "ZIP code is required"}), 400
+
+    try:
+        # Geocoding API to get coordinates from ZIP code
+        geocode_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={zipcode}&key={GOOGLE_API_KEY}"
+        geocode_response = requests.get(geocode_url).json()
+
+        if geocode_response['status'] == 'OK':
+            # Get latitude and longitude
+            location = geocode_response['results'][0]['geometry']['location']
+            latitude = location['lat']
+            longitude = location['lng']
+
+            # Places API to find restaurants
+            places_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+            params = {
+                'location': f"{latitude},{longitude}",
+                'radius': 5000,  # Search within 5 km
+                'type': 'restaurant',
+                'key': GOOGLE_API_KEY
+            }
+            places_response = requests.get(places_url, params=params).json()
+
+            if places_response['status'] == 'OK':
+                # Extract restaurant details
+                restaurants = [
+                    {
+                        'name': place['name'],
+                        'address': place.get('vicinity', 'Address not available'),
+                        'rating': place.get('rating', 'No rating available')
+                    }
+                    for place in places_response['results']
+                ]
+                return jsonify(restaurants), 200
+            else:
+                return jsonify({"error": f"Places API Error: {places_response['status']}"}), 500
+        else:
+            return jsonify({"error": f"Geocoding API Error: {geocode_response['status']}"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)
+    import requests
+
+
 
 
