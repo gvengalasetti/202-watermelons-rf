@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import UpdatePage from "./routes/UpdatePage";
 import RestaurantDetailPage from "./routes/RestaurantDetailPage";
 import { RestaurantsContextProvider } from "./context/RestaurantsContext";
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
           </Routes>
         </Router>
+        <SearchBar />
       </div>
     </RestaurantsContextProvider>
   );

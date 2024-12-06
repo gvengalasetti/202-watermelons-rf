@@ -5,8 +5,12 @@ import { useLocation, useParams, useNavigate } from "react-router-dom";
 const AddReview = () => {
   const { id } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   console.log(location);
+<<<<<<< HEAD
   const history = useNavigate();
+=======
+>>>>>>> 8ae46f2 (new search bar)
   console.log(id);
 
   const [name, setName] = useState("");
@@ -21,13 +25,16 @@ const AddReview = () => {
         review: reviewText,
         rating,
       });
-      history.push("/");
-      history.push(location.pathname);
-    } catch (err) {}
+      navigate("/");
+      navigate(location.pathname);
+    } catch (err) {
+      console.error(err);
+    }
   };
+
   return (
     <div className="mb-2">
-      <form action="">
+      <form onSubmit={handleSubmitReview}>
         <div className="form-row">
           <div className="form-group col-8">
             <label htmlFor="name">Name</label>
@@ -66,11 +73,7 @@ const AddReview = () => {
             className="form-control"
           ></textarea>
         </div>
-        <button
-          type="submit"
-          onClick={handleSubmitReview}
-          className="btn btn-primary"
-        >
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>

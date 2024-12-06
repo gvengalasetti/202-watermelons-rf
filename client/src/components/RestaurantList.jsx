@@ -6,27 +6,32 @@ import StarRating from "./StarRating";
 
 const RestaurantList = (props) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
+<<<<<<< HEAD
   let history = useNavigate();
+=======
+  const navigate = useNavigate();
+
+>>>>>>> 8ae46f2 (new search bar)
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await RestaurantFinder.get("/");
         console.log(response.data.data);
         setRestaurants(response.data.data.restaurants);
-      } catch (err) {}
+      } catch (err) {
+        console.error(err);
+      }
     };
 
     fetchData();
-  }, []);
+  }, [setRestaurants]);
 
   const handleDelete = async (e, id) => {
     e.stopPropagation();
     try {
-      const response = await RestaurantFinder.delete(`/${id}`);
+      await RestaurantFinder.delete(`/${id}`);
       setRestaurants(
-        restaurants.filter((restaurant) => {
-          return restaurant.id !== id;
-        })
+        restaurants.filter((restaurant) => restaurant.id !== id)
       );
     } catch (err) {
       console.log(err);
@@ -35,11 +40,11 @@ const RestaurantList = (props) => {
 
   const handleUpdate = (e, id) => {
     e.stopPropagation();
-    history.push(`/restaurants/${id}/update`);
+    navigate(`/restaurants/${id}/update`);
   };
 
   const handleRestaurantSelect = (id) => {
-    history.push(`/restaurants/${id}`);
+    navigate(`/restaurants/${id}`);
   };
 
   const renderRating = (restaurant) => {
@@ -98,31 +103,6 @@ const RestaurantList = (props) => {
                 </tr>
               );
             })}
-          {/* <tr>
-            <td>mcdonalds</td>
-            <td>New YOrk</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-danger">Delete</button>
-            </td>
-          </tr>
-
-          <tr>
-            <td>mcdonalds</td>
-            <td>New YOrk</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-danger">Delete</button>
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </div>

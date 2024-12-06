@@ -5,7 +5,11 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 
 const UpdateRestaurant = (props) => {
   const { id } = useParams();
+<<<<<<< HEAD
   let history = useNavigate();
+=======
+  const navigate = useNavigate();
+>>>>>>> 8ae46f2 (new search bar)
   const { restaurants } = useContext(RestaurantsContext);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -21,21 +25,21 @@ const UpdateRestaurant = (props) => {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const updatedRestaurant = await RestaurantFinder.put(`/${id}`, {
+    await RestaurantFinder.put(`/${id}`, {
       name,
       location,
       price_range: priceRange,
     });
-    history.push("/");
+    navigate("/");
   };
 
   return (
     <div>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
@@ -69,7 +73,6 @@ const UpdateRestaurant = (props) => {
         </div>
         <button
           type="submit"
-          onClick={handleSubmit}
           className="btn btn-primary"
         >
           Submit
