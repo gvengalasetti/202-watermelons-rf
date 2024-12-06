@@ -3,9 +3,10 @@ from flask import Flask, request, jsonify
 from pymongo.errors import DuplicateKeyError
 from bson import ObjectId
 from database import db
+from flask_cors import CORS
 import requests
 app = Flask(__name__)
-
+CORS(app)
 
 
 # Register user 

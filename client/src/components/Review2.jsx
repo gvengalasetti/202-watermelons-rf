@@ -1,30 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Review2 = ({ restaurantId }) => {
-    // This will be replaced with API data later
-    const staticReviews = [
-        {
-            "id": "1",
-            "userName": "John Doe",
-            "date": "2024-03-15",
-            "stars": 4,
-            "text": "Great food and atmosphere! Would definitely come back again."
-        },
-        {
-            "id": "2",
-            "userName": "Jane Smith",
-            "date": "2024-03-10",
-            "stars": 5,
-            "text": "Best restaurant in town. The service was exceptional."
-        },
-        {
-            "id": "3",
-            "userName": "Mike Johnson",
-            "date": "2024-03-05",
-            "stars": 3,
-            "text": "Food was good but service was a bit slow."
-        }
-    ];
+    const [reviews, setReviews] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const response = await fetch(`http://localhost:5001/restaurants/${restaurantId}/reviews`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch reviews');
+                }
+                const data = await response.json();
+                setReviews(data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchReviews();
+    }, [restaurantId]);
 
     const renderStars = (rating) => {
         return (
@@ -48,11 +46,23 @@ const Review2 = ({ restaurantId }) => {
         </div>
     );
 
+    if (loading) {
+        return <p>Loading reviews...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
+
     return (
         <div style={styles.container}>
             <h2 style={styles.title}>Reviews</h2>
             <div style={styles.reviewList}>
-                {staticReviews.map(renderReviewItem)}
+                {reviews.length > 0 ? (
+                    reviews.map(renderReviewItem)
+                ) : (
+                    <p style={styles.noResults}>No reviews found.</p>
+                )}
             </div>
         </div>
     );
@@ -99,7 +109,12 @@ const styles = {
     "reviewList": {
         "borderTop": "1px solid #E0E0E0",
         "paddingTop": "8px"
+    },
+    "noResults": {
+        "textAlign": "center",
+        "color": "#666",
+        "marginTop": "16px"
     }
 };
 
-export default Review2; 
+export default Review2;

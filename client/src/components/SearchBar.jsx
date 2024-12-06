@@ -1,46 +1,6 @@
 import React, { useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 
-// Mock data for restaurants
-const restaurants = [
-  {
-    "id": 1,
-    "name": "Pasta Palace",
-    "zipcode": "12345",
-    "category": "Italian",
-    "rating": 4.5,
-    "price": "$$",
-    "reviews": ["Great food!", "Loved the ambiance."]
-  },
-  {
-    "id": 2,
-    "name": "Sushi World",
-    "zipcode": "12345",
-    "category": "Japanese",
-    "rating": 4.7,
-    "price": "$$$",
-    "reviews": ["Best sushi in town!", "Fresh and delicious."]
-  },
-  {
-    "id": 3,
-    "name": "Burger Haven",
-    "zipcode": "54321",
-    "category": "American",
-    "rating": 4.2,
-    "price": "$",
-    "reviews": ["Juicy burgers!", "Fast service."]
-  },
-  {
-    "id": 4,
-    "name": "Curry Corner",
-    "zipcode": "67890",
-    "category": "Indian",
-    "rating": 4.8,
-    "price": "$$",
-    "reviews": ["Amazing curry!", "Spicy and flavorful."]
-  }
-];
-
 const SearchBar = () => {
   const [searchCriteria, setSearchCriteria] = useState("name");
   const [inputValue, setInputValue] = useState("");
@@ -50,23 +10,26 @@ const SearchBar = () => {
     setInputValue(event.target.value);
   };
 
-  const handleSearch = () => {
-    const results = restaurants.filter((restaurant) => {
-      if (searchCriteria === "name") {
-        return restaurant.name.toLowerCase().includes(inputValue.toLowerCase());
-      } else if (searchCriteria === "zipcode") {
-        return restaurant.zipcode.includes(inputValue);
-      } else if (searchCriteria === "category") {
-        return restaurant.category.toLowerCase().includes(inputValue.toLowerCase());
-      } else if (searchCriteria === "rating") {
-        return restaurant.rating.toString() === inputValue;
-      } else if (searchCriteria === "price") {
-        return restaurant.price === inputValue;
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(`http://localhost:5001/restaurants`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-      return false;
-    });
+      const data = await response.json();
+      console.log(data)
+      
+      // Filter the data based on search criteria
+      const filteredData = data.filter(restaurant => {
+        const value = restaurant[searchCriteria] || (restaurant.location && restaurant.location.zip);
+        return value && value.toString().toLowerCase().includes(inputValue.toLowerCase());
+      });
 
-    setFilteredRestaurants(results);
+      setFilteredRestaurants(filteredData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setFilteredRestaurants([]);
+    }
   };
 
   return (
@@ -77,10 +40,9 @@ const SearchBar = () => {
         style={styles.select}
       >
         <option value="name">Name</option>
-        <option value="zipcode">Location (Zipcode)</option>
         <option value="category">Category (Food, Cuisine)</option>
-        <option value="rating">Ratings</option>
-        <option value="price">Price</option>
+        <option value="price_level">Price Level</option>
+        <option value="location.zip">Location (Zipcode)</option>
       </select>
 
       <input
@@ -96,7 +58,7 @@ const SearchBar = () => {
       <div>
         {filteredRestaurants.length > 0 ? (
           filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+            <RestaurantCard key={restaurant._id} restaurant={restaurant} />
           ))
         ) : (
           <p style={styles.noResults}>No results found.</p>

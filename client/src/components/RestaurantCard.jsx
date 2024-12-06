@@ -5,11 +5,22 @@ const RestaurantCard = ({ restaurant }) => {
   return (
     <div style={styles.card}>
       <h2 style={styles.title}>{restaurant.name}</h2>
-      <p style={styles.contact}>Location: {restaurant.zipcode}</p>
+      <p style={styles.contact}>Contact: {restaurant.contact_info}</p>
+      <p style={styles.location}>
+        Location: {restaurant.location.street}, {restaurant.location.city}, {restaurant.location.state} {restaurant.location.zip}
+      </p>
       <p style={styles.category}>Category: {restaurant.category}</p>
-      <p style={styles.rating}>Rating: {restaurant.rating}</p>
-      <p style={styles.price}>Price: {restaurant.price}</p>
-      <Review2 restaurantId={restaurant.id} />
+      <p style={styles.description}>Description: {restaurant.description}</p>
+      <p style={styles.hours}>
+        Hours: 
+        <ul>
+          {Object.entries(restaurant.hours).map(([day, hours]) => (
+            <li key={day}>{day.charAt(0).toUpperCase() + day.slice(1)}: {hours}</li>
+          ))}
+        </ul>
+      </p>
+      <p style={styles.price}>Price Level: {restaurant.price_level}</p>
+      <Review2 restaurantId={restaurant._id} />
     </div>
   );
 };
@@ -31,11 +42,19 @@ const styles = {
     fontSize: '14px',
     color: 'gray',
   },
+  location: {
+    fontSize: '14px',
+    color: 'gray',
+  },
   category: {
     fontSize: '14px',
     color: 'gray',
   },
-  rating: {
+  description: {
+    fontSize: '14px',
+    color: 'gray',
+  },
+  hours: {
     fontSize: '14px',
     color: 'gray',
   },
