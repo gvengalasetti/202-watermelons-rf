@@ -3,12 +3,13 @@ from flask import Flask, request, jsonify
 from pymongo.errors import DuplicateKeyError
 from bson import ObjectId
 from database import db
+from User import User
 from flask_cors import CORS
 import requests
 app = Flask(__name__)
 CORS(app)
 
-
+CORS(app)
 # Register user 
 @app.route("/register", methods=["POST"])
 def register_user():
@@ -273,6 +274,45 @@ def restaurants_by_zip():
             return jsonify({"error": f"Geocoding API Error: {geocode_response['status']}"}), 500
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+#signup 
+@app.route('/api/signup', methods=['POST'])
+def signup():
+    data = request.json
+    name = data.get('name')
+    email = data.get('email')
+    password = data.get('password')
+    role = data.get('role', 'User')
+
+    try:
+        user = User(name=name, email=email, password=password, role=role)
+        user_id = user.save()
+        return jsonify({"message": "User registered successfully", "user_id": user_id}), 201
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        return jsonify({"error": "Internal server error", "details": str(e)}), 500
+
+#login
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+
+    try:
+        user = User.validate_user(email, password)
+        if user:
+            return jsonify({"message": "Login successful", "user": {
+                "id": str(user["_id"]),
+                "name": user["name"],
+                "email": user["email"],
+                "role": user["role"],
+            }}), 200
+        else:
+            return jsonify({"error": "Invalid email or password"}), 401
+    except Exception as e:
+        return jsonify({"error": "Internal server error", "details": str(e)}), 500
     
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)
