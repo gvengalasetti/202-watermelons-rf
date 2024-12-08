@@ -6,8 +6,12 @@ import RestaurantDetailPage from "./routes/RestaurantDetailPage";
 import { RestaurantsContextProvider } from "./context/RestaurantsContext";
 import { AppProvider } from "./context/AppContext";
 import SearchBar from "./components/SearchBar";
+<<<<<<< HEAD
 import LoginPage from "./routes/signin";
 import SignupPage from "./routes/signup";
+=======
+
+>>>>>>> 4bcdb26 (REVIEW Functionality)
 const App = () => {
   return (
     <AppProvider>
