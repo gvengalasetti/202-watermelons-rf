@@ -22,6 +22,7 @@ const App = () => {
             <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
           </Routes>
         </Router>
+        <SearchBar />
       </div>
     </RestaurantsContextProvider>
     </AppProvider>

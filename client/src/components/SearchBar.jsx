@@ -64,6 +64,8 @@ const SearchBar = () => {
           <p style={styles.noResults}>No results found.</p>
         )}
       </div>
+      <div>
+    </div>
     </div>
   );
 };

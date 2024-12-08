@@ -1,7 +1,9 @@
 import React from 'react';
 import Review2 from './Review2';
+import RestaurantReviewSection from './RestaurantReviewSection';
 
 const RestaurantCard = ({ restaurant }) => {
+  const restaurantID1="6753614b68217f732db935de"
   return (
     <div style={styles.card}>
       <h2 style={styles.title}>{restaurant.name}</h2>
@@ -21,6 +23,7 @@ const RestaurantCard = ({ restaurant }) => {
       </p>
       <p style={styles.price}>Price Level: {restaurant.price_level}</p>
       <Review2 restaurantId={restaurant._id} />
+      <RestaurantReviewSection restaurantId={restaurant._id}/>
     </div>
   );
 };
