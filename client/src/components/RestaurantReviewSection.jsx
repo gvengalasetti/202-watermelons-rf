@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, X, CheckCircle } from 'lucide-react';
+import styles from './AddReviewModal.module.css'; // Import CSS module
 
 const AddReviewModal = ({ restaurantId, onClose, onSubmit }) => {
   const [rating, setRating] = useState(0);
@@ -58,63 +59,54 @@ const AddReviewModal = ({ restaurantId, onClose, onSubmit }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-xl w-96 p-6 relative">
-        {/* Close Button */}
+    <div className={styles.modalBackground}>
+      <div className={styles.modalContainer}>
         <button 
           onClick={onClose} 
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+          className={styles.closeButton}
         >
           <X size={24} />
         </button>
 
-        <h2 className="text-2xl font-bold mb-4 text-center">Add Your Review</h2>
+        <h2 className={styles.title}>Add Your Review</h2>
 
-        {/* Star Rating */}
-        <div className="flex justify-center mb-4">
+        <div className={styles.starRating}>
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
               size={32}
               fill={(hoverRating || rating) >= star ? '#FFD700' : '#E0E0E0'}
               color="#FFD700"
-              className="cursor-pointer transition-transform transform hover:scale-110"
+              className={styles.star}
               onMouseEnter={() => setHoverRating(star)}
               onMouseLeave={() => setHoverRating(0)}
               onClick={() => setRating(star)}
             />
           ))}
         </div>
-        <p className="text-center mb-4 text-gray-600">
+        <p className={styles.ratingText}>
           {rating > 0 ? `${rating} out of 5 stars` : 'Select a rating'}
         </p>
 
-        {/* Review Text Area */}
         <textarea 
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}
           placeholder="Write your review here (minimum 10 characters)"
-          className="w-full h-32 p-2 border rounded-md mb-4"
+          className={styles.textArea}
         />
 
-        {/* Error Message */}
         {submitError && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4">
+          <div className={styles.errorMessage}>
             {submitError}
           </div>
         )}
 
-        {/* Submit Button */}
         <button
           onClick={handleSubmit}
           disabled={isSubmitting}
-          className={`
-            w-full py-2 rounded-md text-white font-semibold 
-            ${isSubmitting 
-              ? 'bg-gray-400 cursor-not-allowed' 
-              : 'bg-green-500 hover:bg-green-600'
-            }
-          `}
+          className={`${styles.submitButton} ${
+            isSubmitting ? styles.submitButtonDisabled : styles.submitButtonEnabled
+          }`}
         >
           {isSubmitting ? 'Submitting...' : 'Submit Review'}
         </button>
