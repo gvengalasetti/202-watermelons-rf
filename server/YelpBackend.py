@@ -278,46 +278,6 @@ def restaurants_by_zip():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route("/admin/duplicates", methods=["GET"])
-def find_duplicates():
-    try:
-        # Group restaurants by name and address
-        pipeline = [
-            {
-                "$group": {
-                    "_id": {"name": "$name", "address": "$location.address"},
-                    "count": {"$sum": 1},
-                    "restaurant_ids": {"$push": "$_id"}  # Collect all IDs for the group
-                }
-            },
-            {
-                "$match": {"count": {"$gt": 1}}  # Only return groups with duplicates
-            }
-        ]
-
-        duplicates = list(db.restaurants.aggregate(pipeline))
-
-        # Convert ObjectId to string for JSON serialization
-        for duplicate in duplicates:
-            duplicate["restaurant_ids"] = [str(_id) for _id in duplicate["restaurant_ids"]]
-
-        return jsonify(duplicates), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-@app.route("/admin/remove_listing/<restaurant_id>", methods=["DELETE"])
-def remove_listing(restaurant_id):
-    try:
-        # Remove the restaurant by ID
-        result = db.restaurants.delete_one({"_id": ObjectId(restaurant_id)})
-
-        if result.deleted_count == 1:
-            return jsonify({"msg": "Restaurant listing removed successfully"}), 200
-        else:
-            return jsonify({"error": "Restaurant not found"}), 404
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)
     import requests
