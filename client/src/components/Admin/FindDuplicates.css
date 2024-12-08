@@ -1,0 +1,89 @@
+.duplicates-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .duplicate-group {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .duplicate-info {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .expand-arrow {
+    margin-right: 10px; /* Space between the arrow and restaurant name */
+    font-size: 0.8em; /* Adjust arrow size */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .expanded-group {
+    margin-top: 10px;
+  }
+  
+  .restaurant-item {
+    margin-bottom: 15px;
+    display: flex; /* Aligns content horizontally */
+    justify-content: space-between; /* Ensures space between the restaurant info and remove button */
+  }
+  
+  .restaurant-info {
+    flex: 1; /* Takes up all the space available */
+    padding-right: 10px; /* Added padding to give space for the button */
+  }
+  
+  .remove-listing-btn {
+    display: flex;
+    align-items: center; /* Aligns the button vertically with the content */
+  }
+  
+  .remove-listing-btn button {
+    padding: 5px 12px; /* Smaller button */
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Make the text inside the button smaller */
+    width: auto; /* Prevents the button from stretching too wide */
+  }
+  
+  .remove-listing-btn button:hover {
+    background-color: #d13b3b;
+  }
+  
+  .refresh-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .refresh-container p {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .refresh-icon {
+    margin-left: 10px; /* Adjust this margin for slight spacing */
+    cursor: pointer;
+  }
+  
