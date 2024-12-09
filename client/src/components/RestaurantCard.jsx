@@ -1,7 +1,9 @@
 import React from 'react';
 import Review2 from './Review2';
+import RestaurantReviewSection from './RestaurantReviewSection';
 
 const RestaurantCard = ({ restaurant }) => {
+  const restaurantID1="6753614b68217f732db935de"
   return (
     <div style={styles.card}>
       <h2 style={styles.title}>{restaurant.name}</h2>
@@ -9,6 +11,19 @@ const RestaurantCard = ({ restaurant }) => {
       <p style={styles.location}>
         Location: {restaurant.address ? restaurant.address : `${restaurant.location?.street}, ${restaurant.location?.city}, ${restaurant.location?.state} ${restaurant.location?.zip}`}
       </p>
+      <p style={styles.category}>Category: {restaurant.category}</p>
+      <p style={styles.description}>Description: {restaurant.description}</p>
+      <p style={styles.hours}>
+        Hours: 
+        <ul>
+          {Object.entries(restaurant.hours).map(([day, hours]) => (
+            <li key={day}>{day.charAt(0).toUpperCase() + day.slice(1)}: {hours}</li>
+          ))}
+        </ul>
+      </p>
+      <p style={styles.price}>Price Level: {restaurant.price_level}</p>
+      <Review2 restaurantId={restaurant._id} />
+      <RestaurantReviewSection restaurantId={restaurant._id}/>
       <p style={styles.rating}>Rating: {restaurant.rating || 'No rating available'}</p>
 
       {/* Only show additional information if present */}

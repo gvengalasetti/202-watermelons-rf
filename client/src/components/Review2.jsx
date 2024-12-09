@@ -14,6 +14,9 @@ const Review2 = ({ restaurantId }) => {
                 }
                 const data = await response.json();
                 setReviews(data);
+                console.log("Following is the review data:"+data);
+                console.log("Following is the review data:", JSON.stringify(data, null, 2));
+
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -36,15 +39,16 @@ const Review2 = ({ restaurantId }) => {
     };
 
     const renderReviewItem = (item) => (
-        <div style={styles.reviewItem} key={item.id}>
+        <div style={styles.reviewItem} key={item._id}>
             <div style={styles.reviewHeader}>
-                <span style={styles.userName}>{item.userName}</span>
-                <span style={styles.date}>{item.date}</span>
+                <span style={styles.userName}>{item.user_id}</span>
+                <span style={styles.date}>{new Date(item.timestamp).toLocaleDateString()}</span>
             </div>
-            {renderStars(item.stars)}
-            <p style={styles.reviewText}>{item.text}</p>
+            {renderStars(item.rating)}
+            <p style={styles.reviewText}>{item.comment}</p>
         </div>
     );
+    
 
     if (loading) {
         return <p>Loading reviews...</p>;

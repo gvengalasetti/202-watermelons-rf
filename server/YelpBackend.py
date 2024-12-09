@@ -6,6 +6,8 @@ from database import db
 from User import User
 from flask_cors import CORS
 import requests
+from bson import ObjectId
+
 app = Flask(__name__)
 CORS(app)
 
@@ -165,7 +167,7 @@ def search_restaurants():
     return jsonify(restaurants), 200
 
 # Get restaurant details along with its reviews
-@app.route("/restaurant/<restaurant_id>", methods=["GET"])
+@app.route("/restaurant/<restaurant_id>/avgrating", methods=["GET"])
 def get_restaurant_reviews(restaurant_id):
     try:
         # Find the restaurant by ID
@@ -197,7 +199,22 @@ def get_restaurant_reviews(restaurant_id):
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
 
+@app.route("/restaurants/<restaurant_id>/reviews", methods=["GET"])
+def fetch_reviews_for_restaurant(restaurant_id):
+    try:
+        # Find reviews for this restaurant
+        reviews = list(db.reviews.find({"restaurant_id": restaurant_id}))
+        for review in reviews:
+            review["_id"] = str(review["_id"])
+            review["restaurant_id"] = str(review["restaurant_id"])
+            review["user_id"] = str(review["user_id"])
+
+        return jsonify(reviews), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # Reviews
 @app.route("/reviews", methods=["GET"])
@@ -222,6 +239,115 @@ def get_users():
     for user in users:
         user["_id"] = str(user["_id"])  
     return jsonify(users), 200
+
+reviews_collection = db.reviews  # Access the 'reviews' collection
+@app.route('/api/reviews', methods=['POST'])
+def post_review():
+    try:
+        print("This post review request has not completed all the way through")
+
+        # Parse JSON data from request
+        data = request.get_json()
+        print(data)
+        # Validate input fields
+        required_fields = ['restaurantId', 'rating', 'reviewText']
+        for field in required_fields:
+            if field not in data:
+                print(field)
+                return jsonify({'error': f'Missing field: {field}'}), 400
+        
+        # Extract data
+        restaurant_id = data['restaurantId']
+        rating = data['rating']
+        review_text = data['reviewText']
+
+
+
+        # Basic validation for values
+        if not isinstance(rating, int) or rating < 1 or rating > 5:
+            return jsonify({'error': 'Rating must be an integer between 1 and 5'}), 400
+        
+        if len(review_text.strip()) < 10:
+            return jsonify({'error': 'Review text must be at least 10 characters long'}), 400
+
+
+# Generate a new random ObjectId
+        new_id = ObjectId()
+
+        # Save the review (simulated)
+        fakeReview = {
+            '_id': new_id,
+            'restaurant_id': restaurant_id,
+            'user_id': "user_2",
+            'rating': rating,
+            'comment': review_text,
+            'timestamp':'2024-12-06T20:36:00.639533'
+        }
+        review = {
+            'restaurantId': restaurant_id,
+            'rating': rating,
+            'comment': review_text,
+        }
+        print(fakeReview)
+#   # Append the review to the `reviews` array of the specific restaurant
+#         result = db.restaurants.update_one(
+#             {'_id': ObjectId(restaurant_id)},
+#             {'$push': {'reviews': review}},
+#             upsert=True  # Create a new document if not found
+#         )
+
+
+        # if result.matched_count > 0:
+        #     print(f"Document with restaurantId {restaurant_id} was found and updated.")
+        # else:
+        #     print(f"No document found with restaurantId {restaurant_id}. A new document was inserted.")
+
+        # print(f"Number of documents modified: {result.modified_count}")
+        # print(f"Upserted ID (if a new document was inserted): {result.upserted_id}")
+        # #Not working code
+
+        # if result.upserted_id or result.modified_count > 0:
+        #     return {'message': 'Review submitted successfully', 'review': review}, 201
+        # else:
+        #     return {'error': 'Failed to submit review'}, 500
+        print(": : :")
+
+        try:
+    # Attempt to insert the review into the collection
+            result = reviews_collection.insert_one(fakeReview)
+            print(f"Review successfully inserted with ID: {result.inserted_id}")
+        except Exception as e:
+    # Catch and log any exceptions that occur
+            print(f"An error occurred while inserting the review: {str(e)}")        
+            print("testing")
+        
+        print(": : :")
+        restaurant_id = fakeReview['restaurant_id']
+        print(restaurant_id)
+        reviews1 = reviews_collection.find({"restaurant_id": restaurant_id})
+        # Iterate over the cursor and print each document
+        print(reviews1)
+        if reviews_collection.count_documents({"restaurant_id": restaurant_id}) == 0:
+            print("No reviews found for the given restaurant_id")
+        # Insert a document into 'reviews'
+        for review in reviews1:
+            print(review)
+            print("testing")
+
+        print(f"Inserted document ID: {result.inserted_id}")
+
+
+        # Log the result of the operation
+        if result.inserted_id:
+            print(f"Review successfully added with ID: {result.inserted_id}")
+            return jsonify({'message': 'Review added successfully', 'review_id': str(result.inserted_id)}), 201
+        else:
+            print("Failed to insert review.")
+            return jsonify({'error': 'Failed to add review'}), 500
+    except Exception as e:
+        # Catch unexpected errors
+        return jsonify({'error': str(e)}), 500
+
 
 @app.route("/wow", methods=["GET"])
 def hello():

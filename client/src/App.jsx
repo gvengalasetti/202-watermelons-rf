@@ -11,6 +11,7 @@ import SignupPage from "./routes/signup";
 import AdminPage from "./components/Admin/Admin";  // Corrected import path
 import MyRestaurants from "./routes/MyRestaurants";
 
+
 const App = () => {
   return (
     <AppProvider>
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/my-restaurants" element={<MyRestaurants />} /> {/* Add the new route */}
           </Routes>
         </Router>
+        <SearchBar />
       </div>
     </RestaurantsContextProvider>
     </AppProvider>
