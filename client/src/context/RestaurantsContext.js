@@ -9,6 +9,11 @@ export const RestaurantsContextProvider = (props) => {
   const addRestaurants = (restaurant) => {
     setRestaurants([...restaurants, restaurant]);
   };
+  const removeRestaurants = (restaurantId) => {
+    setRestaurants((prevRestaurants) =>
+      prevRestaurants.filter((restaurant) => restaurant._id !== restaurantId)
+    );
+  };
   return (
     <RestaurantsContext.Provider
       value={{
@@ -17,6 +22,8 @@ export const RestaurantsContextProvider = (props) => {
         addRestaurants,
         selectedRestaurant,
         setSelectedRestaurant,
+        removeRestaurants,  // Add this
+
       }}
     >
       {props.children}

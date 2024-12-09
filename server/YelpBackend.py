@@ -353,8 +353,99 @@ def remove_listing(restaurant_id):
             return jsonify({"error": "Restaurant not found"}), 404
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.route("/business/add_new_restaurant", methods=["POST"])
+def add_new_restaurant():
+    try:
+
+        # Retrieve the restaurant data from the request
+        data = request.get_json()
+
+        # Validate required fields
+        required_fields = ["name", "category", "price_level", "location", "contact_info", "hours", "description"]
+        for field in required_fields:
+            if not data.get(field):
+                return jsonify({"error": f"{field} is required."}), 400
+
+        # Validate nested fields
+        if not isinstance(data.get("location"), dict):
+            print("Invalid location format")
+            return jsonify({"error": "Location must be a dictionary."}), 400
+        if not isinstance(data.get("hours"), dict):
+            print("Invalid hours format")
+            return jsonify({"error": "Hours must be a dictionary."}), 400
+
+        # Extract restaurant details
+        restaurant = {
+            "name": data.get("name"),
+            "category": data.get("category"),
+            "price_level": data.get("price_level"),
+            "location": data.get("location"),  # Should be a dictionary
+            "contact_info": data.get("contact_info"),
+            "hours": data.get("hours"),  # Should be a dictionary
+            "description": data.get("description"),
+            "photos": data.get("photos", []),  # Default to empty array
+            "owner_id": data.get("owner_id"),  # Should come from AppContext
+        }
+
+        # Insert the restaurant into the database
+        result = db.restaurants.insert_one(restaurant)
+        restaurant_id = str(result.inserted_id)
+
+        # Log successful insertion
+        return jsonify({"msg": "Restaurant added successfully", "restaurant_id": restaurant_id}), 201
+
+    except Exception as e:
+        # Log the exception details
+        return jsonify({"error": "Failed to add restaurant", "details": str(e)}), 500
+    
+#Get restaurants by owner_id
+@app.route("/business/restaurants/<owner_id>", methods=["GET"])
+def get_restaurants_by_owner(owner_id):
+    try:
+        restaurants = list(db.restaurants.find({"owner_id": owner_id}))
+        for restaurant in restaurants:
+            restaurant["_id"] = str(restaurant["_id"])  # Convert ObjectId to string
+        return jsonify({"restaurants": restaurants}), 200
+    except Exception as e:
+        return jsonify({"error": "Failed to fetch restaurants", "details": str(e)}), 500
+    
+#update a restaurant
+@app.route("/business/restaurants/<restaurant_id>", methods=["PUT"])
+def update_restaurant(restaurant_id):
+    try:
+        data = request.get_json()
+        # Exclude _id from the update fields
+        if "_id" in data:
+            del data["_id"]
+
+    #Filter out empty fields
+        update_fields = {key: value for key, value in data.items() if value}
 
 
+        if not update_fields:
+            return jsonify({"error": "No fields to update"}), 400
+
+        # Perform the update
+        result = db.restaurants.update_one({"_id": ObjectId(restaurant_id)}, {"$set": update_fields})
+
+        if result.matched_count == 0:
+            return jsonify({"error": "Restaurant not found"}), 404
+
+        return jsonify({"msg": "Restaurant updated successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": "Failed to update restaurant", "details": str(e)}), 500
+    
+#Delete a restaurant
+@app.route("/business/restaurants/<restaurant_id>", methods=["DELETE"])
+def delete_restaurant(restaurant_id):
+    try:
+        result = db.restaurants.delete_one({"_id": ObjectId(restaurant_id)})
+        if result.deleted_count == 0:
+            return jsonify({"error": "Restaurant not found"}), 404
+
+        return jsonify({"msg": "Restaurant deleted successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": "Failed to delete restaurant", "details": str(e)}), 500
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)
     import requests

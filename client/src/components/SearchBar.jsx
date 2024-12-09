@@ -12,18 +12,36 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/restaurants`);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      let filteredData = [];
+
+      if (searchCriteria === "location.zip") {
+        // Handle ZIP code search (Maps API returns only name, location, and rating)
+        const response = await fetch(`http://localhost:5001/restaurants_by_zip?zipcode=${inputValue}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+
+        // Ensure only name, location, and rating are included
+        filteredData = data.map(restaurant => ({
+          name: restaurant.name,
+          address: restaurant.address,
+          rating: restaurant.rating
+        }));
+      } else {
+        // Handle other search criteria (reviews needed)
+        const response = await fetch(`http://localhost:5001/restaurants`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+
+        // Filter the data based on search criteria
+        filteredData = data.filter(restaurant => {
+          const value = restaurant[searchCriteria] || (restaurant.location && restaurant.location.zip);
+          return value && value.toString().toLowerCase().includes(inputValue.toLowerCase());
+        });
       }
-      const data = await response.json();
-      console.log(data)
-      
-      // Filter the data based on search criteria
-      const filteredData = data.filter(restaurant => {
-        const value = restaurant[searchCriteria] || (restaurant.location && restaurant.location.zip);
-        return value && value.toString().toLowerCase().includes(inputValue.toLowerCase());
-      });
 
       setFilteredRestaurants(filteredData);
     } catch (error) {
@@ -58,7 +76,7 @@ const SearchBar = () => {
       <div>
         {filteredRestaurants.length > 0 ? (
           filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant._id} restaurant={restaurant} />
+            <RestaurantCard key={restaurant.name} restaurant={restaurant} />
           ))
         ) : (
           <p style={styles.noResults}>No results found.</p>
@@ -70,39 +88,39 @@ const SearchBar = () => {
 
 // Inline styles
 const styles = {
-  "container": {
-    "padding": "16px"
+  container: {
+    padding: "16px"
   },
-  "select": {
-    "marginBottom": "16px",
-    "padding": "8px",
-    "borderRadius": "4px",
-    "border": "1px solid #ccc",
-    "fontSize": "16px"
+  select: {
+    marginBottom: "16px",
+    padding: "8px",
+    borderRadius: "4px",
+    border: "1px solid #ccc",
+    fontSize: "16px"
   },
-  "input": {
-    "height": "40px",
-    "borderWidth": "1px",
-    "borderColor": "#ccc",
-    "borderRadius": "8px",
-    "paddingHorizontal": "12px",
-    "marginBottom": "16px",
-    "fontSize": "16px",
-    "backgroundColor": "white",
-    "width": "100%"
+  input: {
+    height: "40px",
+    borderWidth: "1px",
+    borderColor: "#ccc",
+    borderRadius: "8px",
+    paddingHorizontal: "12px",
+    marginBottom: "16px",
+    fontSize: "16px",
+    backgroundColor: "white",
+    width: "100%"
   },
-  "button": {
-    "padding": "10px 15px",
-    "borderRadius": "4px",
-    "backgroundColor": "#007BFF",
-    "color": "white",
-    "border": "none",
-    "cursor": "pointer"
+  button: {
+    padding: "10px 15px",
+    borderRadius: "4px",
+    backgroundColor: "#007BFF",
+    color: "white",
+    border: "none",
+    cursor: "pointer"
   },
-  "noResults": {
-    "textAlign": "center",
-    "color": "#666",
-    "marginTop": "16px"
+  noResults: {
+    textAlign: "center",
+    color: "#666",
+    marginTop: "16px"
   }
 };
 

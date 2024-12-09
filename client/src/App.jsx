@@ -8,6 +8,9 @@ import { AppProvider } from "./context/AppContext";
 import SearchBar from "./components/SearchBar";
 import LoginPage from "./routes/signin";
 import SignupPage from "./routes/signup";
+import AdminPage from "./components/Admin/Admin";  // Corrected import path
+import MyRestaurants from "./routes/MyRestaurants";
+
 const App = () => {
   return (
     <AppProvider>
@@ -20,6 +23,8 @@ const App = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/restaurants/:id/update" element={<UpdatePage />} />
             <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/my-restaurants" element={<MyRestaurants />} /> {/* Add the new route */}
           </Routes>
         </Router>
       </div>

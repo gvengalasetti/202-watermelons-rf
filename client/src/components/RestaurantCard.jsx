@@ -5,22 +5,41 @@ const RestaurantCard = ({ restaurant }) => {
   return (
     <div style={styles.card}>
       <h2 style={styles.title}>{restaurant.name}</h2>
-      <p style={styles.contact}>Contact: {restaurant.contact_info}</p>
+      {/* Display location */}
       <p style={styles.location}>
-        Location: {restaurant.location.street}, {restaurant.location.city}, {restaurant.location.state} {restaurant.location.zip}
+        Location: {restaurant.address ? restaurant.address : `${restaurant.location?.street}, ${restaurant.location?.city}, ${restaurant.location?.state} ${restaurant.location?.zip}`}
       </p>
-      <p style={styles.category}>Category: {restaurant.category}</p>
-      <p style={styles.description}>Description: {restaurant.description}</p>
-      <p style={styles.hours}>
-        Hours: 
-        <ul>
-          {Object.entries(restaurant.hours).map(([day, hours]) => (
-            <li key={day}>{day.charAt(0).toUpperCase() + day.slice(1)}: {hours}</li>
+      <p style={styles.rating}>Rating: {restaurant.rating || 'No rating available'}</p>
+
+      {/* Only show additional information if present */}
+      {restaurant.contact_info && <p style={styles.contact}>Contact: {restaurant.contact_info}</p>}
+      {restaurant.category && <p style={styles.category}>Category: {restaurant.category}</p>}
+      {restaurant.description && <p style={styles.description}>Description: {restaurant.description}</p>}
+      {restaurant.hours && (
+        <p style={styles.hours}>
+          Hours:
+          <ul>
+            {Object.entries(restaurant.hours).map(([day, hours]) => (
+              <li key={day}>
+                {day.charAt(0).toUpperCase() + day.slice(1)}: {hours}
+              </li>
+            ))}
+          </ul>
+        </p>
+      )}
+      {restaurant.price_level && <p style={styles.price}>Price Level: {restaurant.price_level}</p>}
+      
+      {/* Reviews section */}
+      {restaurant.reviews && restaurant.reviews.length > 0 && (
+        <div style={styles.reviews}>
+          <h3>Reviews:</h3>
+          {restaurant.reviews.map((review, index) => (
+            <div key={index} style={styles.review}>
+              <p><strong>{review.author_name}</strong>: {review.text}</p>
+            </div>
           ))}
-        </ul>
-      </p>
-      <p style={styles.price}>Price Level: {restaurant.price_level}</p>
-      <Review2 restaurantId={restaurant._id} />
+        </div>
+      )}
     </div>
   );
 };
@@ -46,6 +65,10 @@ const styles = {
     fontSize: '14px',
     color: 'gray',
   },
+  rating: {
+    fontSize: '14px',
+    color: 'gray',
+  },
   category: {
     fontSize: '14px',
     color: 'gray',
@@ -61,6 +84,15 @@ const styles = {
   price: {
     fontSize: '14px',
     color: 'gray',
+  },
+  reviews: {
+    marginTop: '10px',
+  },
+  review: {
+    marginBottom: '8px',
+    padding: '10px',
+    backgroundColor: '#f9f9f9',
+    borderRadius: '5px',
   },
 };
 

@@ -1,14 +1,37 @@
 import React, { useState } from "react";
-import { Home, User, Mail, LogOut } from "lucide-react";
+import { Home, User, Mail, LogOut, Settings } from "lucide-react"; // Add Settings for Admin Console
 import { Link, useNavigate } from "react-router-dom";
+import { useAppContext } from "../context/AppContext"; // Adjust path to AppContext
 
 const Header = () => {
   const [activeItem, setActiveItem] = useState("home");
   const navigate = useNavigate();
+  const { user } = useAppContext(); // Access user details from context
 
+  // Define navigation items
   const navItems = [
     { id: "home", label: "Home", icon: Home, path: "/home" },
   ];
+
+  // Add "My Restaurants" only for users with the "Owner" role
+  if (user?.role === "Owner") {
+    navItems.push({
+      id: "my-restaurants",
+      label: "My Restaurants",
+      icon: User,
+      path: "/my-restaurants",
+    });
+  }
+
+  // Add "Admin Console" only for users with the "Admin" role
+  if (user?.role === "Admin") {
+    navItems.push({
+      id: "admin-console",
+      label: "Admin Console",
+      icon: Settings,
+      path: "/admin",
+    });
+  }
 
   const handleLogout = () => {
     navigate("/"); // Redirect to login page
@@ -99,4 +122,3 @@ const logoutButtonStyle = {
 };
 
 export default Header;
-
