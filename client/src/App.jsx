@@ -28,7 +28,6 @@ const App = () => {
             <Route path="/my-restaurants" element={<MyRestaurants />} /> {/* Add the new route */}
           </Routes>
         </Router>
-        <SearchBar />
       </div>
     </RestaurantsContextProvider>
     </AppProvider>
