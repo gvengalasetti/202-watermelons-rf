@@ -10,7 +10,7 @@ const Review2 = ({ restaurantId }) => {
     useEffect(() => {
         const fetchReviews = async () => {
             try {
-                const response = await fetch(`http://localhost:5001/restaurants/${restaurantId}/reviews`);
+                const response = await fetch(`http://35.171.154.179:5001/restaurants/${restaurantId}/reviews`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch reviews');
                 }
@@ -23,7 +23,7 @@ const Review2 = ({ restaurantId }) => {
                 setLoading(false);
             }
             try{
-                const response = await fetch(`http://localhost:5001/restaurants/${restaurantId}/average_review`);
+                const response = await fetch(`http://35.171.154.179:5001/restaurants/${restaurantId}/average_review`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch reviews');
                 }

@@ -18,7 +18,7 @@ const FindDuplicates = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await RestaurantFinder.get("http://localhost:5001/admin/duplicates");
+      const response = await RestaurantFinder.get("http://35.171.154.179:5001/admin/duplicates");
       setDuplicates(response.data);
       setLastUpdated(new Date().toLocaleString());
     } catch (err) {
@@ -30,7 +30,7 @@ const FindDuplicates = () => {
 
   const fetchRestaurantDetails = async (restaurantId) => {
     try {
-      const response = await RestaurantFinder.get(`http://localhost:5001/restaurant/${restaurantId}`);
+      const response = await RestaurantFinder.get(`http://35.171.154.179:5001/restaurant/${restaurantId}`);
       setRestaurantDetails((prevDetails) => ({
         ...prevDetails,
         [restaurantId]: response.data,
@@ -69,7 +69,7 @@ const FindDuplicates = () => {
     }
 
     try {
-      await RestaurantFinder.delete(`http://localhost:5001/admin/remove_listing/${restaurantId}`);
+      await RestaurantFinder.delete(`http://35.171.154.179:5001/admin/remove_listing/${restaurantId}`);
       alert("Restaurant removed successfully.");
       removeRestaurants(restaurantId);
 
