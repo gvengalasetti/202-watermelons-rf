@@ -14,16 +14,6 @@ const Home = () => {
       <SearchBar />
 
       {/* Display user details */}
-      {user && (
-        <div style={{ margin: "20px", padding: "10px", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#f9f9f9" }}>
-          <h2>User Details</h2>
-          <p><strong>Name:</strong> {user.name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Role:</strong> {user.role}</p>
-          {user.id && <p><strong>ID:</strong> {user.id}</p>} {/* If ID exists */}
-        </div>
-      )}
-
       {/* Uncomment these lines to use additional components */}
       {/* <AddRestaurant />
       <RestaurantList /> */}
