@@ -16,7 +16,7 @@ const App = () => {
   return (
     <AppProvider>
     <RestaurantsContextProvider>
-      <div className="container">
+      <div >
         <Router>
           <Routes>
             <Route path="/" element={<LoginPage />} />
