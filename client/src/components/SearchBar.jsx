@@ -59,6 +59,7 @@ const SearchBar = () => {
         else if(searchCriteria==="ratings"){
           try{
         const response = await fetch(`http://localhost:5001/restaurants/by_rating/${inputValue}`);
+
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -71,7 +72,7 @@ const SearchBar = () => {
           
         });
           
-        ;            
+                    
       } catch (error) {
         console.error('Error fetching restaurants:', error);
         setFilteredRestaurants([]); // Clear results on error

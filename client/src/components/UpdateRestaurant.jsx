@@ -46,6 +46,7 @@ const UpdateRestaurant = (props) => {
             type="text"
           />
         </div>
+        
 
         <div className="form-group">
           <label htmlFor="location">Location</label>
