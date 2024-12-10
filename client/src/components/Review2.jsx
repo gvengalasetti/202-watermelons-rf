@@ -4,6 +4,8 @@ const Review2 = ({ restaurantId }) => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [averageReview, setAverageReview]=useState([]);
+
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -14,16 +16,25 @@ const Review2 = ({ restaurantId }) => {
                 }
                 const data = await response.json();
                 setReviews(data);
-                console.log("Following is the review data:"+data);
-                console.log("Following is the review data:", JSON.stringify(data, null, 2));
 
             } catch (error) {
                 setError(error.message);
             } finally {
                 setLoading(false);
             }
+            try{
+                const response = await fetch(`http://localhost:5001/restaurants/${restaurantId}/average_review`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch reviews');
+                }
+                const data = await response.json();
+                console.log("data average rating" +data.average_rating)
+                setAverageReview(data.average_rating)
+            }
+            catch (error){
+                setError("Unable to Calculate Average Review")
+            }
         };
-
         fetchReviews();
     }, [restaurantId]);
 
@@ -61,6 +72,7 @@ const Review2 = ({ restaurantId }) => {
     return (
         <div style={styles.container}>
             <h2 style={styles.title}>Reviews</h2>
+            <h3 >AVG. {averageReview}</h3>
             <div style={styles.reviewList}>
                 {reviews.length > 0 ? (
                     reviews.map(renderReviewItem)

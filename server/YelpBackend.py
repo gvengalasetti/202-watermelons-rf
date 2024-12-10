@@ -6,12 +6,12 @@ from database import db
 from User import User
 from flask_cors import CORS
 import requests
-from bson import ObjectId
+import os
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
 
-CORS(app)
 # Register user 
 @app.route("/register", methods=["POST"])
 def register_user():
@@ -215,6 +215,29 @@ def fetch_reviews_for_restaurant(restaurant_id):
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+@app.route("/restaurants/<restaurant_id>/average_review", methods=["GET"])
+def fetch_average_reviews(restaurant_id):
+    try:
+        # Find reviews for this restaurant
+        reviews = list(db.reviews.find({"restaurant_id": restaurant_id}))
+        for review in reviews:
+            review["_id"] = str(review["_id"])
+            review["restaurant_id"] = str(review["restaurant_id"])
+            review["user_id"] = str(review["user_id"])
+
+        if reviews:
+            average_rating = sum([review["rating"] for review in reviews]) / len(reviews)
+            average_rating = round(average_rating, 2)  # Round to 2 decimal places
+        else:
+            average_rating = None  # No reviews, so no average
+        print(average_rating)
+
+        return jsonify({"average_rating": average_rating}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 # Reviews
 @app.route("/reviews", methods=["GET"])
@@ -231,6 +254,42 @@ def get_restaurants():
     for restaurant in restaurants:
         restaurant["_id"] = str(restaurant["_id"])  
     return jsonify(restaurants), 200
+
+@app.route("/restaurants/by_rating/<float:min_rating>", methods=["GET"])
+def get_restaurants_by_rating(min_rating):
+    try:
+        # Get all restaurants from the database
+        restaurants = list(db.restaurants.find())
+        filtered_restaurants = []
+
+        for restaurant in restaurants:
+            # Convert restaurant ObjectId to string for JSON serialization
+            restaurant["_id"] = str(restaurant["_id"])
+
+            # Find reviews for this restaurant
+            reviews = list(db.reviews.find({"restaurant_id": str(restaurant["_id"])}))
+            for review in reviews:
+                review["_id"] = str(review["_id"])
+                review["restaurant_id"] = str(review["restaurant_id"])
+                review["user_id"] = str(review["user_id"])
+
+            # Add reviews to the restaurant details
+            restaurant["reviews"] = reviews
+
+            # Calculate average rating from reviews
+            if reviews:
+                average_rating = sum([review["rating"] for review in reviews]) / len(reviews)
+                restaurant["average_rating"] = round(average_rating, 2)  # Round to 2 decimal places
+            else:
+                restaurant["average_rating"] = None  # No reviews, so no average
+            # Include restaurant if its average rating meets or exceeds the minimum rating
+            if restaurant["average_rating"] is not None and restaurant["average_rating"] >= min_rating:
+                filtered_restaurants.append(restaurant)
+        return jsonify(filtered_restaurants), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 # users
 @app.route("/users", methods=["GET"])
@@ -274,14 +333,18 @@ def post_review():
 # Generate a new random ObjectId
         new_id = ObjectId()
 
-        # Save the review (simulated)
+        current_time = datetime.now()
+
+# Convert the current time to a timestamp
+        timestamp = current_time.timestamp()
+
         fakeReview = {
             '_id': new_id,
             'restaurant_id': restaurant_id,
-            'user_id': "user_2",
+            'user_id': "TEST_user",
             'rating': rating,
             'comment': review_text,
-            'timestamp':'2024-12-06T20:36:00.639533'
+            'timestamp': current_time
         }
         review = {
             'restaurantId': restaurant_id,
@@ -321,7 +384,6 @@ def post_review():
             print(f"An error occurred while inserting the review: {str(e)}")        
             print("testing")
         
-        print(": : :")
         restaurant_id = fakeReview['restaurant_id']
         print(restaurant_id)
         reviews1 = reviews_collection.find({"restaurant_id": restaurant_id})
@@ -572,6 +634,43 @@ def delete_restaurant(restaurant_id):
         return jsonify({"msg": "Restaurant deleted successfully"}), 200
     except Exception as e:
         return jsonify({"error": "Failed to delete restaurant", "details": str(e)}), 500
+    
+
+# Use the `db` object from `database.py` to access collections
+restaurants_collection = db['restaurants']
+
+@app.route('/get-restaurant-photos', methods=['GET'])
+def get_restaurant_photos():
+    print("hellllllllll yeah")
+    try:
+        # Get the restaurant ID from query parameters
+        restaurant_id = request.args.get('restaurant_id')
+
+        if not restaurant_id:
+            return jsonify({"error": "restaurant_id is required"}), 400
+
+        # Convert string to ObjectId if required (depends on MongoDB setup)
+        try:
+            _id = ObjectId(restaurant_id)
+        except Exception:
+            return jsonify({"error": "Invalid restaurant_id format"}), 400
+
+        # Find the restaurant by ID
+        restaurant = restaurants_collection.find_one({"_id": _id})
+        if not restaurant:
+            return jsonify({"error": "Restaurant not found"}), 404
+
+        # Extract photos array
+        photos = restaurant.get('photos', [])
+        cleaned_photos = [photo for photo in photos if not photo.startswith('blob:')]
+
+
+        return jsonify({"restaurant_id": str(restaurant_id), "photos": cleaned_photos}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)
     import requests
