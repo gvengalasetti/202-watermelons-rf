@@ -260,7 +260,7 @@ def get_restaurants_by_rating(min_rating):
     try:
         # Get all restaurants from the database
         restaurants = list(db.restaurants.find())
-        filtered_restaurants = []
+        valid_restaurants = []
 
         for restaurant in restaurants:
             # Convert restaurant ObjectId to string for JSON serialization
@@ -282,13 +282,23 @@ def get_restaurants_by_rating(min_rating):
                 restaurant["average_rating"] = round(average_rating, 2)  # Round to 2 decimal places
             else:
                 restaurant["average_rating"] = None  # No reviews, so no average
-            # Include restaurant if its average rating meets or exceeds the minimum rating
-            if restaurant["average_rating"] is not None and restaurant["average_rating"] >= min_rating:
-                filtered_restaurants.append(restaurant)
-        return jsonify(filtered_restaurants), 200
+
+            # Add to valid list if it has an average rating
+            if restaurant["average_rating"] is not None:
+                valid_restaurants.append(restaurant)
+
+        # Sort restaurants by how close their average rating is to min_rating
+        sorted_restaurants = sorted(
+            valid_restaurants,
+            key=lambda r: abs(r["average_rating"] - min_rating)
+        )
+
+        return jsonify(sorted_restaurants), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
 
 
 # users
