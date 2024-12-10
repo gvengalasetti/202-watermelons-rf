@@ -17,7 +17,7 @@ const RestaurantCard = ({ restaurant }) => {
         setIsPhotosLoading(true);
 
         // Construct the URL with the restaurant ID as a query parameter
-        const url = new URL('http://35.171.154.179:5001/get-restaurant-photos');
+        const url = new URL('http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/get-restaurant-photos');
         url.searchParams.append('restaurant_id', restaurant._id);
 
         // Make the GET request
