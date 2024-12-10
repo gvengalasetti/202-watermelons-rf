@@ -37,7 +37,7 @@ const MyRestaurants = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/business/restaurants/${user.id}`);
+        const response = await fetch(`http://35.171.154.179:5001/business/restaurants/${user.id}`);
         const result = await response.json();
 
         if (response.ok) {
@@ -128,7 +128,7 @@ const MyRestaurants = () => {
     }
 
     try {
-      const response = await fetch("http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/business/add_new_restaurant", {
+      const response = await fetch("http://35.171.154.179:5001/business/add_new_restaurant", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, owner_id: user.id }),
@@ -151,7 +151,7 @@ const MyRestaurants = () => {
   // Handle delete restaurant
   const handleDelete = async (restaurantId) => {
     try {
-      const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/business/restaurants/${restaurantId}`, {
+      const response = await fetch(`http://35.171.154.179:5001/business/restaurants/${restaurantId}`, {
         method: "DELETE",
       });
       const result = await response.json();
@@ -180,7 +180,7 @@ const MyRestaurants = () => {
 
     try {
       const { _id, ...fieldsToUpdate } = formData; // Exclude _id for update
-      const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/business/restaurants/${editingRestaurantId}`, {
+      const response = await fetch(`http://35.171.154.179:5001/business/restaurants/${editingRestaurantId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(fieldsToUpdate),

@@ -26,7 +26,7 @@ const AddReviewModal = ({ restaurantId, onClose, onSubmit }) => {
     try {
       console.log("all of the logic is working so far through review modal");
       // Simulated API call - replace with actual API endpoint
-      const response = await fetch('http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/api/reviews', {
+      const response = await fetch('http://35.171.154.179:5001/api/reviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

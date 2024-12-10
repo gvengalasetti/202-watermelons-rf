@@ -31,7 +31,7 @@ const SearchBar = () => {
 
       if (searchCriteria === "location.zip") {
         // Handle ZIP code search
-        const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/restaurants_by_zip?zipcode=${inputValue}`);
+        const response = await fetch(`http://35.171.154.179:5001/restaurants_by_zip?zipcode=${inputValue}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -44,7 +44,7 @@ const SearchBar = () => {
           rating: restaurant.rating
         }));
       } else if(searchCriteria==="price_level"){
-        const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/restaurants`);
+        const response = await fetch(`http://35.171.154.179:5001/restaurants`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -58,7 +58,7 @@ const SearchBar = () => {
       }
         else if(searchCriteria==="ratings"){
           try{
-        const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/restaurants/by_rating/${inputValue}`);
+        const response = await fetch(`http://35.171.154.179:5001/restaurants/by_rating/${inputValue}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -85,7 +85,7 @@ const SearchBar = () => {
       
       else {
         // Handle other search criteria
-        const response = await fetch(`http://rf-lb-1272531251.us-east-1.elb.amazonaws.com:5001/restaurants`);
+        const response = await fetch(`http://35.171.154.179:5001/restaurants`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
