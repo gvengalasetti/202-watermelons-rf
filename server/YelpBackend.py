@@ -680,6 +680,39 @@ def get_restaurant_photos():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Get restaurant details along with its reviews
+@app.route("/restaurant-fetch/<restaurant_id>", methods=["GET"])
+def get_restaurant_details(restaurant_id):
+    try:
+        # Find the restaurant by ID
+        restaurant = db.restaurants.find_one({"_id": ObjectId(restaurant_id)})
+        if not restaurant:
+            return jsonify({"error": "Restaurant not found"}), 404
+
+        # Convert restaurant ObjectId to string for JSON serialization
+        restaurant["_id"] = str(restaurant["_id"])
+
+        # Find reviews for this restaurant
+        reviews = list(db.reviews.find({"restaurant_id": restaurant_id}))
+        for review in reviews:
+            review["_id"] = str(review["_id"])
+            review["restaurant_id"] = str(review["restaurant_id"])
+            review["user_id"] = str(review["user_id"])
+
+        # Add reviews to the restaurant details
+        restaurant["reviews"] = reviews
+
+        # Calculate average rating from reviews
+        if reviews:
+            average_rating = sum([review["rating"] for review in reviews]) / len(reviews)
+            restaurant["average_rating"] = round(average_rating, 2)  # Round to 2 decimal places
+        else:
+            restaurant["average_rating"] = None  # No reviews, so no average
+
+        return jsonify(restaurant), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5001)

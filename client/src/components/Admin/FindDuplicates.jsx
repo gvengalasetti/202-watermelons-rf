@@ -30,7 +30,7 @@ const FindDuplicates = () => {
 
   const fetchRestaurantDetails = async (restaurantId) => {
     try {
-      const response = await RestaurantFinder.get(`http://35.171.154.179:5001/restaurant/${restaurantId}`);
+      const response = await RestaurantFinder.get(`http://35.171.154.179:5001/restaurant-fetch/${restaurantId}`);
       setRestaurantDetails((prevDetails) => ({
         ...prevDetails,
         [restaurantId]: response.data,
